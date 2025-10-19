@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} | {% endif %}Creative Mind Habits</title>
+  <meta name="description" content="{{ description or 'Creative Mind Habits - Prompts, tools & tiny systems that keep you writing' }}">
+  
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="site-branding">
+          <h1 class="site-title">
+            <a href="/">Creative Mind Habits</a>
+          </h1>
+          <p class="site-tagline">Prompts, tools & tiny systems that keep you writing</p>
+        </div>
+        
+        <nav class="site-nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/pages/about/">About</a></li>
+            <li><a href="/pages/tools/">Tools</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      {{ content | safe }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2025 Creative Mind Habits • Built with intention</p>
+        <p class="footer-tagline">Thanks for being here. We'll figure it out.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

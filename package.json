@@ -1,0 +1,21 @@
+{
+  "name": "creative-mind-habits",
+  "version": "1.0.0",
+  "description": "Creative Mind Habits - Elegant literary blog",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "keywords": ["11ty", "blog"],
+  "author": "Creative Mind Habits",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "luxon": "^3.4.4",
+    "markdown-it": "^13.0.2",
+    "markdown-it-anchor": "^8.6.7"
+  }
+}
