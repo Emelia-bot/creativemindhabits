@@ -14,21 +14,21 @@ permalink: "/prompt-vault/"
   <div style="height: 3px; background: #57534e;"></div>
   <div style="padding: 2.5rem;">
     
-    <h2 style="margin-bottom: 1.5rem; font-size: 1.5em;">What's Inside</h2>
+    <h2 style="margin-bottom: 1rem; font-size: 1.5em;">What's Inside</h2>
     
-    <div style="margin-bottom: 1.5rem;">
+    <div style="margin-bottom: 1rem;">
       <strong style="color: #292524;">40+ battle-tested prompts</strong>
-      <p style="color: #57534e; margin-top: 0.5rem;">Outlines, revision passes, idea warmups, and publishing helpers.</p>
+      <p style="color: #57534e; margin-top: 0.25rem; margin-bottom: 0;">Outlines, revision passes, idea warmups, and publishing helpers.</p>
     </div>
     
-    <div style="margin-bottom: 1.5rem;">
+    <div style="margin-bottom: 1rem;">
       <strong style="color: #292524;">Voice-safe outputs</strong>
-      <p style="color: #57534e; margin-top: 0.5rem;">Prompts tuned to protect tone so it still sounds like you.</p>
+      <p style="color: #57534e; margin-top: 0.25rem; margin-bottom: 0;">Prompts tuned to protect tone so it still sounds like you.</p>
     </div>
     
     <div style="margin-bottom: 0;">
       <strong style="color: #292524;">Fast start cards</strong>
-      <p style="color: #57534e; margin-top: 0.5rem;">Pick a card, paste, ship—no overthinking required.</p>
+      <p style="color: #57534e; margin-top: 0.25rem; margin-bottom: 0;">Pick a card, paste, ship—no overthinking required.</p>
     </div>
     
   </div>
@@ -37,9 +37,9 @@ permalink: "/prompt-vault/"
 <div style="background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 8px; padding: 2.5rem; margin-bottom: 2rem;">
   
   <h2 style="text-align: center; margin-bottom: 0.5rem; font-size: 1.5em;">Get the Prompt Vault</h2>
-  <p style="text-align: center; color: #57534e; margin-bottom: 2rem;">Access is email-only. Submit the form and we'll send the download to your inbox.</p>
+  <p style="text-align: center; color: #57534e; margin-bottom: 1.5rem;">Access is email-only. Submit the form and we'll send the download to your inbox.</p>
   
-  <div id="cmhSuccessMessage" style="display: none; background: #d1fae5; border: 1px solid #6ee7b7; color: #065f46; padding: 1.5rem; border-radius: 6px; margin-bottom: 2rem; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+  <div id="cmhSuccessMessage" style="display: none; background: #d1fae5; border: 1px solid #6ee7b7; color: #065f46; padding: 1.5rem; border-radius: 6px; margin-bottom: 1.5rem; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
     <strong>✓ Success! Your Prompt Vault is ready.</strong>
     <div style="margin-top: 1rem;">
       <a href="https://drive.google.com/file/d/1HUXpaHRVdL0s2RicbGZHTyrxT4rghDAk/view?usp=drive_link" style="display: inline-block; background: #1c1917; color: white; padding: 14px 32px; text-decoration: none; border-radius: 6px; font-weight: 600;">📥 Download the Prompt Vault</a>
@@ -48,19 +48,19 @@ permalink: "/prompt-vault/"
   
   <form id="cmhEmailForm" style="max-width: 500px; margin: 0 auto;">
     
-    <div style="margin-bottom: 1.25rem;">
+    <div style="margin-bottom: 1rem;">
       <label for="cmh-name" style="display: block; color: #44403c; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 500; margin-bottom: 0.5rem; font-size: 0.9em;">Name</label>
       <input type="text" id="cmh-name" name="name" required placeholder="Your name" style="width: 100%; padding: 12px 16px; border: 1px solid #d6d3d1; border-radius: 6px; font-size: 1em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: white;">
     </div>
     
-    <div style="margin-bottom: 1.25rem;">
+    <div style="margin-bottom: 1rem;">
       <label for="cmh-email" style="display: block; color: #44403c; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 500; margin-bottom: 0.5rem; font-size: 0.9em;">Email</label>
       <input type="email" id="cmh-email" name="email" required placeholder="your@email.com" style="width: 100%; padding: 12px 16px; border: 1px solid #d6d3d1; border-radius: 6px; font-size: 1em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: white;">
     </div>
     
     <button type="submit" style="width: 100%; background: #1c1917; color: white; padding: 14px; border: none; border-radius: 6px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 600; font-size: 1em; cursor: pointer; transition: background 0.2s;">Send Me the Vault</button>
     
-    <p style="text-align: center; color: #78716c; font-size: 0.85em; margin-top: 1.25rem; line-height: 1.6;">
+    <p style="text-align: center; color: #78716c; font-size: 0.85em; margin-top: 1rem; line-height: 1.6;">
       Prefer email? Write to <a href="mailto:hello@creativemindhabits.com" style="color: #57534e; text-decoration: underline;">hello@creativemindhabits.com</a>
     </p>
     
