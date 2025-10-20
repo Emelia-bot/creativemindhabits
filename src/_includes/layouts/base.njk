@@ -49,5 +49,30 @@
     </div>
   </footer>
 
+<script>
+let lastScroll = 0;
+const header = document.querySelector('.site-header');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  
+  if (currentScroll <= 0) {
+    header.classList.remove('scroll-up');
+    return;
+  }
+  
+  if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+    // Scrolling down
+    header.classList.remove('scroll-up');
+    header.classList.add('scroll-down');
+  } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+    // Scrolling up
+    header.classList.remove('scroll-down');
+    header.classList.add('scroll-up');
+  }
+  
+  lastScroll = currentScroll;
+});
+</script>
 </body>
 </html>

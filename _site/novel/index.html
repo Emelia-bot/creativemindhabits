@@ -20,14 +20,16 @@
           <p class="site-tagline">Prompts, tools & tiny systems that keep you writing</p>
         </div>
         
-        <nav class="site-nav">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/pages/about/">About</a></li>
-            <li><a href="/pages/tools/">Tools</a></li>
-          </ul>
-        </nav>
+      <nav class="site-nav">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/tools/">Tools</a></li>
+    <li><a href="/creator-systems/">Creator Systems</a></li>
+    <li><a href="/prompt-vault/">Prompt Vault</a></li>
+    <li><a href="/novel/">Novel</a></li>
+  </ul>
+</nav>
       </div>
     </div>
   </header>
@@ -119,5 +121,30 @@ No spoilers — chapters release in small, cozy updates.<br>
     </div>
   </footer>
 
+<script>
+let lastScroll = 0;
+const header = document.querySelector('.site-header');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  
+  if (currentScroll <= 0) {
+    header.classList.remove('scroll-up');
+    return;
+  }
+  
+  if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+    // Scrolling down
+    header.classList.remove('scroll-up');
+    header.classList.add('scroll-down');
+  } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+    // Scrolling up
+    header.classList.remove('scroll-down');
+    header.classList.add('scroll-up');
+  }
+  
+  lastScroll = currentScroll;
+});
+</script>
 </body>
 </html>

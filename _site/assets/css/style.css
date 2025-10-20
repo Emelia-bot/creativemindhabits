@@ -460,3 +460,18 @@ img {
   max-width: 800px;
   margin: 0 auto 3rem;
 }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  transition: transform 0.3s ease;
+  z-index: 100;
+}
+
+.site-header.scroll-down {
+  transform: translateY(-100%);
+}
+
+.site-header.scroll-up {
+  transform: translateY(0);
+}
