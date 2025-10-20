@@ -10,29 +10,35 @@
 </head>
 <body>
   
-  <header class="site-header">
-    <div class="container">
-      <div class="header-content">
-        <div class="site-branding">
-          <h1 class="site-title">
-            <a href="/">Creative Mind Habits</a>
-          </h1>
-          <p class="site-tagline">Prompts, tools & tiny systems that keep you writing</p>
-        </div>
-        
-      <nav class="site-nav">
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/about/">About</a></li>
-    <li><a href="/tools/">Tools</a></li>
-    <li><a href="/creator-systems/">Creator Systems</a></li>
-    <li><a href="/prompt-vault/">Prompt Vault</a></li>
-    <li><a href="/novel/">Novel</a></li>
-  </ul>
-</nav>
+<header class="site-header">
+  <div class="container">
+    <div class="header-content">
+      <div class="site-branding">
+        <h1 class="site-title">
+          <a href="/">Creative Mind Habits</a>
+        </h1>
+        <p class="site-tagline">Prompts, tools & tiny systems that keep you writing</p>
       </div>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <nav class="site-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/tools/">Tools</a></li>
+          <li><a href="/creator-systems/">Creator Systems</a></li>
+          <li><a href="/prompt-vault/">Prompt Vault</a></li>
+          <li><a href="/novel/">Novel</a></li>
+        </ul>
+      </nav>
     </div>
-  </header>
+  </div>
+</header>
 
   <main class="site-main">
     <div class="container">
@@ -87,6 +93,27 @@
   </footer>
 
 <script>
+// Mobile menu toggle
+const navToggle = document.querySelector('.nav-toggle');
+const siteNav = document.querySelector('.site-nav');
+
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    siteNav.classList.toggle('active');
+  });
+  
+  // Close menu when clicking a link
+  const navLinks = document.querySelectorAll('.site-nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.classList.remove('active');
+      siteNav.classList.remove('active');
+    });
+  });
+}
+
+// Hide header on scroll
 let lastScroll = 0;
 const header = document.querySelector('.site-header');
 
@@ -99,11 +126,9 @@ window.addEventListener('scroll', () => {
   }
   
   if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
-    // Scrolling down
     header.classList.remove('scroll-up');
     header.classList.add('scroll-down');
   } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
-    // Scrolling up
     header.classList.remove('scroll-down');
     header.classList.add('scroll-up');
   }
