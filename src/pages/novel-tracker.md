@@ -1,94 +1,187 @@
 ---
-title: "a quiet season - Novel Progress"
+title: "a quiet season - progress tracker"
 layout: layouts/base.njk
 permalink: "/novel/"
 ---
 
+<style>
+  .chapter-list {
+    border: 1px solid #e7e5e4;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .chapter-item {
+    padding: 1.25rem;
+    border-bottom: 1px solid #e7e5e4;
+    background: white;
+  }
+  
+  .chapter-item:last-child {
+    border-bottom: none;
+  }
+  
+  .chapter-item.incomplete {
+    background: #fafaf9;
+  }
+  
+  .chapter-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1c1917;
+    font-size: 1.1em;
+  }
+  
+  .chapter-title.dimmed {
+    color: #a8a29e;
+  }
+  
+  .chapter-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.9em;
+    color: #57534e;
+  }
+  
+  .meta-row {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .status-complete {
+    color: #059669;
+    font-weight: 500;
+  }
+  
+  .status-drafting {
+    color: #78716c;
+    font-style: italic;
+  }
+  
+  .status-not-started {
+    color: #a8a29e;
+    font-style: italic;
+  }
+  
+  @media (min-width: 640px) {
+    .chapter-meta {
+      flex-direction: row;
+      gap: 1rem;
+    }
+    
+    .meta-row {
+      gap: 1rem;
+    }
+  }
+</style>
+
 <div style="background: white; border: 1px solid #e7e5e4; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); overflow: hidden; max-width: 860px; margin: 0 auto;">
   <div style="height: 3px; background: #57534e;"></div>
-  <div style="padding: 2.5rem;">
+  <div style="padding: 2.5rem 1.5rem;">
     
-    <h2 style="font-size: 2.8em; letter-spacing: -0.5px; line-height: 1.2; font-weight: 400; font-style: italic; margin-bottom: 1rem;">a quiet season</h2>
+    <h2 style="font-size: 2.2em; letter-spacing: -0.5px; line-height: 1.2; font-weight: 400; font-style: italic; margin-bottom: 1rem;">a quiet season</h2>
     
-    <p><em>Status:</em> In progress · Format: serial chapters · Theme: Disconnection and quiet awakening</p>
+    <p style="font-size: 0.95em;"><em>Status:</em> In progress · <em>Format:</em> Serial novel (5 chapters) · <em>Theme:</em> Disconnection and quiet awakening</p>
     
     <p><strong>a quiet season</strong> is a quiet, literary novel about a teacher who finds an anonymous student notebook and begins to rewrite her days. Rainy mornings, small kindnesses, and unanswered questions pull her toward a life she might still claim. It's about staying, leaving, and the courage to name what you want.</p>
     
-    <p><strong>Progress:</strong> 2 / 5 chapters · <strong>3,444</strong> words so far</p>
-    
-    <div style="margin: 1.25rem 0 0.5rem 0; background: #e7e5e4; border-radius: 100px; height: 12px; overflow: hidden;">
-      <div style="width: 40%; height: 100%; background: #57534e; border-radius: 100px;"></div>
+    <div style="margin: 2rem 0 1rem 0;">
+      <p style="margin-bottom: 0.5rem;"><strong>Progress:</strong> 2 / 5 chapters · <strong>3,444</strong> words written</p>
+      <div style="background: #e7e5e4; border-radius: 100px; height: 12px; overflow: hidden;">
+        <div style="width: 40%; height: 100%; background: #57534e; border-radius: 100px;"></div>
+      </div>
     </div>
     
-    <h3 style="margin: 2rem 0 1rem 0; font-size: 1.6em; letter-spacing: -0.3px; font-weight: 500;">Chapters</h3>
+    <h3 style="margin: 2.5rem 0 1.5rem 0; font-size: 1.4em; letter-spacing: -0.3px; font-weight: 500;">Chapter Progress</h3>
     
-    <div style="border: 1px solid #e7e5e4; border-radius: 8px; overflow: hidden;">
+    <div class="chapter-list">
       
-      <div style="padding: 1rem; border-bottom: 1px solid #e7e5e4; background: white;">
-        <div style="font-weight: 600; margin-bottom: 0.5rem;">1 — <a href="https://www.creativemindhabits.com/2025/10/im-writing-my-first-novel-in-public-and.html" target="_blank" rel="noopener">The Still Life</a></div>
-        <div style="display: flex; gap: 1rem; font-size: 0.9em; color: #57534e;">
-          <span>2,259 words</span>
-          <span>•</span>
-          <span>Done</span>
-          <span>•</span>
-          <span>Disconnection</span>
+      <div class="chapter-item">
+        <div class="chapter-title">1 — The Still Life</div>
+        <div class="chapter-meta">
+          <div class="meta-row">
+            <span>2,259 words</span>
+            <span>•</span>
+            <span class="status-complete">✓ Complete</span>
+          </div>
+          <div class="meta-row">
+            <span style="color: #78716c;">Theme:</span>
+            <span>Disconnection</span>
+          </div>
         </div>
       </div>
       
-      <div style="padding: 1rem; border-bottom: 1px solid #e7e5e4; background: white;">
-        <div style="font-weight: 600; margin-bottom: 0.5rem;">2 — The Echo</div>
-        <div style="display: flex; gap: 1rem; font-size: 0.9em; color: #57534e;">
-          <span>1,185 words</span>
-          <span>•</span>
-          <span>Done</span>
-          <span>•</span>
-          <span>Memory</span>
+      <div class="chapter-item">
+        <div class="chapter-title">2 — The Echo</div>
+        <div class="chapter-meta">
+          <div class="meta-row">
+            <span>1,185 words</span>
+            <span>•</span>
+            <span class="status-complete">✓ Complete</span>
+          </div>
+          <div class="meta-row">
+            <span style="color: #78716c;">Theme:</span>
+            <span>Memory</span>
+          </div>
         </div>
       </div>
       
-      <div style="padding: 1rem; border-bottom: 1px solid #e7e5e4; background: white;">
-        <div style="font-weight: 600; margin-bottom: 0.5rem;">3 — The Drift</div>
-        <div style="display: flex; gap: 1rem; font-size: 0.9em; color: #57534e;">
-          <span>—</span>
-          <span>•</span>
-          <span style="background: #f5f5f4; padding: 4px 12px; border-radius: 100px; border: 1px solid #e7e5e4;">Not started</span>
-          <span>•</span>
-          <span>Resistance</span>
+      <div class="chapter-item incomplete">
+        <div class="chapter-title">3 — The Drift</div>
+        <div class="chapter-meta">
+          <div class="meta-row">
+            <span class="status-drafting">Drafting...</span>
+          </div>
+          <div class="meta-row">
+            <span style="color: #78716c;">Theme:</span>
+            <span style="color: #78716c;">Resistance</span>
+          </div>
         </div>
       </div>
       
-      <div style="padding: 1rem; border-bottom: 1px solid #e7e5e4; background: white;">
-        <div style="font-weight: 600; margin-bottom: 0.5rem;">4 — The Flood</div>
-        <div style="display: flex; gap: 1rem; font-size: 0.9em; color: #57534e;">
-          <span>—</span>
-          <span>•</span>
-          <span style="background: #f5f5f4; padding: 4px 12px; border-radius: 100px; border: 1px solid #e7e5e4;">Not started</span>
-          <span>•</span>
-          <span>Confrontation</span>
+      <div class="chapter-item incomplete">
+        <div class="chapter-title dimmed">4 — The Flood</div>
+        <div class="chapter-meta">
+          <div class="meta-row">
+            <span class="status-not-started">Not started</span>
+          </div>
+          <div class="meta-row">
+            <span style="color: #a8a29e;">Theme:</span>
+            <span style="color: #a8a29e;">Confrontation</span>
+          </div>
         </div>
       </div>
       
-      <div style="padding: 1rem; background: white;">
-        <div style="font-weight: 600; margin-bottom: 0.5rem;">5 — The Quiet Season</div>
-        <div style="display: flex; gap: 1rem; font-size: 0.9em; color: #57534e;">
-          <span>—</span>
-          <span>•</span>
-          <span style="background: #f5f5f4; padding: 4px 12px; border-radius: 100px; border: 1px solid #e7e5e4;">Not started</span>
-          <span>•</span>
-          <span>Renewal</span>
+      <div class="chapter-item incomplete">
+        <div class="chapter-title dimmed">5 — The Quiet Season</div>
+        <div class="chapter-meta">
+          <div class="meta-row">
+            <span class="status-not-started">Not started</span>
+          </div>
+          <div class="meta-row">
+            <span style="color: #a8a29e;">Theme:</span>
+            <span style="color: #a8a29e;">Renewal</span>
+          </div>
         </div>
       </div>
       
     </div>
     
-    <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 2rem;">
-      <a href="https://www.creativemindhabits.com/2025/10/im-writing-my-first-novel-in-public-and.html" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 6px; background: #1c1917; color: white; text-decoration: none; font-weight: 600; font-size: 0.95em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;" target="_blank" rel="noopener">Start at Chapter 1 →</a>
-      <a href="https://www.creativemindhabits.com/search/label/A%20Quiet%20Season" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 6px; background: white; color: #292524; text-decoration: none; border: 1px solid #d6d3d1; font-weight: 500; font-size: 0.95em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;" target="_blank" rel="noopener">All chapters</a>
-      <a href="/prompt-vault/" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 6px; background: white; color: #292524; text-decoration: none; border: 1px solid #d6d3d1; font-weight: 500; font-size: 0.95em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">Follow by email</a>
+    <div style="margin-top: 2.5rem; padding: 1.5rem; background: #f5f5f4; border-radius: 8px; border-left: 3px solid #57534e;">
+      <p style="margin: 0; color: #44403c; line-height: 1.7; font-size: 0.95em;">
+        <strong style="color: #1c1917;">Writing in progress.</strong> I'm not sharing drafts until the novel is complete. This page tracks my progress — chapters release when they're ready, not before.
+      </p>
     </div>
     
-    <div style="margin-top: 1.5rem; color: #78716c; font-size: 0.9em; font-style: italic; padding-top: 1.5rem; border-top: 1px solid #e7e5e4;">
-      No spoilers — chapters release in small, cozy updates.
+    <div style="margin-top: 2rem; text-align: center;">
+      <a href="/prompt-vault/" style="display: inline-block; padding: 12px 24px; border-radius: 6px; background: #1c1917; color: white; text-decoration: none; font-weight: 600; font-size: 0.95em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">Get notified when chapters release →</a>
+    </div>
+    
+    <div style="margin-top: 2rem; color: #78716c; font-size: 0.9em; font-style: italic; text-align: center; padding-top: 2rem; border-top: 1px solid #e7e5e4;">
+      Writing slowly. Sharing intentionally. No spoilers until it's done.
     </div>
     
   </div>
