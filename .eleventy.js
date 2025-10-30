@@ -1,5 +1,7 @@
 
 const { DateTime } = require("luxon");
+const sitemap = require("@quasibit/eleventy-plugin-sitemap");
+
 
 module.exports = function(eleventyConfig) {
   
@@ -46,6 +48,12 @@ eleventyConfig.addPassthroughCopy("src/assets/js");
   };
 
   eleventyConfig.setLibrary("md", markdownIt(options).use(markdownItAnchor, opts));
+  
+    eleventyConfig.addPlugin(sitemap, {
+    sitemap: {
+      hostname: "https://creativemindhabits.com",
+    },
+  });
 
   return {
     templateFormats: ["md", "njk", "html"],
