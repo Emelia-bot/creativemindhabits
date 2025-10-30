@@ -1,0 +1,3542 @@
+Now carefully type out (don't copy/paste) just this simpler version:
+javascriptconst form = document.getElementById('cmhEmailForm');
+const successMessage = document.getElementById('cmhSuccessMessage');
+
+if (form) {
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('cmh-name').value;
+        const email = document.getElementById('cmh-email').value;
+        const scriptURL = 
+'https://script.google.com/macros/s/AKfycbwVH1fU_hBU6xBS2lCz8W81YxZZLHB_bOUCiMOkjGa9294obpHfwO4jaO3BNQi9GpYD/exec';
+        
+        try {
+            await fetch(scriptURL, {
+                method: 'POST',
+                body: JSON.stringify({ 
+                    name: name, 
+                    email: email, 
+                    timestamp: new Date().toISOString(),
+                    source: 'Creative Mind Habits - Prompt Vault'
+                })
+            });
+            
+            successMessage.style.display = 'block';
+            form.reset();
+            
+        } catch (error) {
+            alert('Something went wrong. Please email us directly at 
+hello@creativemindhabits.com');
+        }
+    });
+}
+Save: Control + O, Enter, Control + X
+Then test again. Let me know what happens!RetryEsame issueLet's try a 
+different approach - maybe the nano paste is corrupting the file. 
+Let's use VS Code instead:
+In VS Code:
+
+Navigate to src/assets/js/
+Delete prompt-vault-form.js if it exists
+Right-click on the js folder → New File → name it 
+prompt-vault-form.js
+Open the new file
+Paste this clean version:
+
+javascriptconst form = document.getElementById('cmhEmailForm');
+const successMessage = document.getElementById('cmhSuccessMessage');
+
+if (form) {
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('cmh-name').value;
+        const email = document.getElementById('cmh-email').value;
+        const scriptURL = 
+'https://script.google.com/macros/s/AKfycbwVH1fU_hBU6xBS2lCz8W81YxZZLHB_bOUCiMOkjGa9294obpHfwO4jaO3BNQi9GpYD/exec';
+        
+        try {
+            await fetch(scriptURL, {
+                method: 'POST',
+                body: JSON.stringify({ 
+                    name: name, 
+                    email: email, 
+                    timestamp: new Date().toISOString(),
+                    source: 'Creative Mind Habits - Prompt Vault'
+                })
+            });
+            
+            successMessage.style.display = 'block';
+            form.reset();
+            
+        } catch (error) {
+            alert('Something went wrong. Please email us directly.');
+        }
+    });
+}
+
+Save (Command + S)
+
+Now test the form again. If it still errors, check the browser 
+console again - what's the exact error message now?RetryEokay finally 
+it works🎉 Excellent! The form is now working!
+
+Progress Check
+✅ Step 1 Complete: All 5 custom pages added and working
+
+About
+Tools
+Prompt Vault (with working form!)
+Creator Systems
+Novel tracker
+
+
+Ready for Step 2: Migrate Best Blog Posts
+Now we need to convert 3-5 of your best posts from Blogger to 
+Markdown and add them to your 11ty site.
+Question: Which posts do you want to migrate?
+You can either:
+
+Give me the Blogger URLs of your top 3-5 posts, and I'll help convert 
+them
+Tell me the topics/titles, and I'll help you find and convert them
+
+Remember from your plan: "Only the best posts, not everything" - so 
+pick your favorites!
+What posts should we 
+migrate?RetryEhttps://www.creativemindhabits.com/2025/07/book-review-bury-my-heart-at-wounded.html, 
+https://www.creativemindhabits.com/2024/11/%20Book-Review-Creative-Acts-for-Curious-People.html, 
+https://www.creativemindhabits.com/2025/07/ctrlaltunderstand-2-skim-culture-were.html. 
+, 
+https://www.creativemindhabits.com/2025/01/A%20Review%20of%20Thinking%20Fast%20and%20Slow.html, 
+https://www.creativemindhabits.com/2024/12/Book%20Review-Creativity-Inc-Overcoming-the-Unseen-Forces-That-Stand-in-the-Way-of-True-Inspiration.htmlPerfect! 
+5 excellent posts. Let me fetch them and convert them to Markdown for 
+your 11ty site.1 stepFailed to fetch 
+https://www.creativemindhabits.com/2024/11/ 
+Book-Review-Creative-Acts-for-Curious-People.htmlFailed to fetch 
+https://www.creativemindhabits.com/2024/11/Book-Review-Creative-Acts-for-Curious-People.htmlLet 
+me try searching for these posts instead:site:creativemindhabits.com 
+"Creative Acts for Curious People"0 resultsI see the URLs have some 
+formatting issues (spaces in the URLs). Could you copy the post 
+content directly from your Blogger dashboard and paste it here? That 
+would be the fastest way.
+For each of the 5 posts, I'll need:
+
+Title
+Date published
+Full post content (text)
+Any images (we can add those later)
+
+Let's start with one post at a time. Can you paste the content of 
+your first post (Bury My Heart at Wounded Knee)? Just copy it from 
+the Blogger editor and paste it here.Retry<p>This review of <em>Bury 
+My Heart at Wounded Knee</em> explores the emotional weight, 
+historical significance, and why every history-lover should read it 
+(even when it hurts).</p>
+
+<div class="separator" style="clear: both;"><a 
+href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhltHApastedEBook 
+Review: Bury My Heart at Wounded Knee, 7.8.25..Perfect! Let me 
+convert this to a clean Markdown post for your 11ty 
+site.2025-07-08-bury-my-heart-at-wounded-knee.mdCode ---
+title: "Book Review: Bury My Heart at Wounded Knee"
+date: 2025-07-08
+description: "This review of Bury My Heart at Wounded Knee explores 
+the emotional weight, historical significance, and why every 
+history-lover should read it (even when it hurtsPerfect! Now create 
+this post file in VS Code:
+
+Navigate to src/posts/
+Create a new file: 2025-07-08-bury-my-heart-at-wounded-knee.md
+Paste the content from the artifact above
+Save it
+
+The dev server should auto-refresh and you'll see this post on your 
+homepage!
+Ready for post #2? Paste the content for "Creative Acts for Curious 
+People" next (with the title and date published).Retry<span 
+style="font-family: verdana;">In the realm of creativity and design 
+thinking, "Creative Acts for Curious People" by Sarah Stein Greenberg 
+stands out as a transformative resource. This book is not your 
+typical read; rather than a linear narrative, it serves as an 
+interactive workbook filled witpastedEnov 10, 2024,  Book Review: 
+Creative Acts for Curious 
+People,2024-11-10-creative-acts-for-curious-people.mdCode ---
+title: "Book Review: Creative Acts for Curious People"
+date: 2024-11-10
+description: "A transformative workbook filled with over eighty 
+engaging exercises designed to unlock your creative potential, from 
+Stanford's d.school."
+tags: ["book review"Great! Now in VS Code:
+
+Create file: src/posts/2024-11-10-creative-acts-for-curious-people.md
+Paste the content from the artifact above
+Save
+
+Post #3 next! Paste the content for "CtrlAltUnderstand: Skim Culture" 
+(with the date).RetryE7/28/25 3:29 PM,  Skim Culture — We’re 
+Consuming More, Understanding Less, <p><em>"I feel like I read 
+everything… but remember nothing."</em></p>
+<div class="separator" style="clear: both;"><a 
+href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj40qwJwWlhz5AIpGa1zr1Cbcc3y3bWZHiSAVQdnmTaqeODJ9Bgq44QVmI_zBgnhkMWhOeNJi4LIknv-uDSbCDAmnsHAcVLQLQVp0kFT8AuQlky16P0duYqj0V2Cjm6wlgYGHd5jgn4zQRbv1Nc1qAcDY13rAjSDQ-je1RTw9nxzBILvf6y5HFI36W9avao/s1200/ctrlaltunderstand2.png" 
+style="display: block; padding: 1em 0; text-align: center; "><img 
+alt="" border="0" width="320" data-original-height="800" 
+data-original-width="1200" 
+src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj40qwJwWlhz5AIpGa1zr1Cbcc3y3bWZHiSAVQdnmTaqeODJ9Bgq44QVmI_zBgnhkMWhOeNJi4LIknv-uDSbCDAmnsHAcVLQLQVp0kFT8AuQlky16P0duYqj0V2Cjm6wlgYGHd5jgn4zQRbv1Nc1qAcDY13rAjSDQ-je1RTw9nxzBILvf6y5HFI36W9avao/s320/ctrlaltunderstand2.png"/></a></div>
+<p>Yep. That’s what this edition is about.</p>
+<p>We’re surrounded by more content than ever. But instead of feeling 
+informed, we often feel overloaded. Scrolling replaces studying. 
+Liking replaces understanding. And somewhere along the way, 
+<strong>reading became skimming… and thinking became 
+reacting</strong>.</p>
+<p>This isn’t a lecture. It’s a soft spiral. A digital reality check 
+I needed—and maybe you do too.</p>
+<hr>
+<h3>📲 What Skim Culture Looks Like</h3>
+<ul>
+<li>Reading headlines like they’re full articles</li>
+<li>Bookmarking essays we’ll “get back to” (we won’t)</li>
+<li>Reposting without reading</li>
+<li>Scrolling past nuance because we’re tired</li>
+</ul>
+<p>We skim captions. We skim conversations. We even skim emotions 
+sometimes.</p>
+<p>And the weird part? It’s not because we’re lazy—it’s because we’re 
+overwhelmed.</p>
+<hr>
+<h3>🤖 AI Made It Easier. Also Trickier.</h3>
+<p>Tools like ChatGPT help us summarize and clarify. But they also 
+encourage shortcut thinking. Three bullet points and a nice tone? We 
+call it “depth.” But is it really?</p>
+<p>AI can simplify. It can’t synthesize meaning for you. That’s still 
+on us.</p>
+<hr>
+<h3>🧠 Seeming Smart ≠ Thinking Deep</h3>
+<p>You’ve seen it too, right? The beautifully worded paragraph that 
+says... almost nothing? The quote everyone reposts, even though no 
+one’s quite sure what it means?</p>
+<p>We sound fluent. But we’re not always slowing down to <em>actually 
+think</em>.</p>
+<p>Noticing that doesn’t make you a cynic. It makes you 
+conscious.</p>
+<hr>
+<h3>🛠️ 3 Gentle Ways to Reclaim Your Brain</h3>
+<ul>
+<li><strong>1. Pick one thing to read all the way through this 
+week.</strong><br>No multitasking. No tab-switching. Just read. 
+Fully.</li>
+<li><strong>2. Summarize a big idea in your own words.</strong><br>If 
+you can’t explain it simply, maybe you don’t understand it yet. 
+That’s okay—dig in.</li>
+<li><strong>3. Question the vibe.</strong><br>Does this post sound 
+smart… or <em>actually</em> say something?</li>
+</ul>
+<p>These aren’t productivity hacks. They’re just ways to stop 
+thinking in fragments.</p>
+<hr>
+<h3>📖 Missed CTRL+ALT+Understand #1?</h3>
+<p><a 
+href="https://www.creativemindhabits.com/2025/06/ctrlaltunderstand-1-everyone-sounds.html">Click 
+here to read Edition 1: The Era of Seeming Smart</a> — where we 
+unpacked how AI can simulate insight without grounding it in real 
+thought.</p>
+<p>This series is a little rebellion. Against performative learning. 
+Against endless scroll. For the people who still want to 
+<em>understand</em>.</p>
+<!--Newsletter Embed-->
+<div style="margin-top: 40px;">
+  <p><strong>Enjoying this series?</strong><br>
+  Then you’ll love <em>The Writer’s Code</em> — my free weekly 
+newsletter for creative minds who want to stay sharp without burning 
+out.</p>
+  <iframe 
+src="https://embeds.beehiiv.com/5c41e911-59a7-4be9-b209-a8827ce86c0a?slim=true" 
+data-test-id="beehiiv-embed" height="52" frameborder="0" 
+scrolling="no" style="margin: 0; border-radius: 0px !important; 
+background-color: transparent;"></iframe>
+</div>2025-07-28-skim-culture.mdCode ---
+title: "CtrlAltUnderstand #2: Skim Culture — We're Consuming More, 
+Understanding Less"
+date: 2025-07-28
+description: "I feel like I read everything… but remember nothing. A 
+digital reality check on skim culture and how to reclaim deep 
+thinking."
+Perfect! In VS Code:
+
+Create file: src/posts/2025-07-28-skim-culture.md
+Paste the content from the artifact
+Save
+
+Post #4 next! Paste the content for "Thinking Fast and Slow" (with 
+the date: January 2025).Retry<p><span style="font-family: 
+verdana;">Have you ever wondered <b>why we make the decisions</b> we 
+do? Why do we sometimes trust our gut, while at other times, we 
+carefully analyze every detail? These questions lie at the heart of 
+Daniel Kahneman’s groundbreaking book, <b>Thinking, Fast and 
+Slow</b>.pastedE1/30/25 2:50 PM, Thinking Fast and 
+Slow,2025-01-30-thinking-fast-and-slow.mdCode ---
+title: "Book Review: Thinking, Fast and Slow"
+date: 2025-01-30
+description: "Daniel Kahneman's groundbreaking exploration of the two 
+systems that drive our thoughts and decisions—and why we make 
+irrational choices without realizing it."
+tags: ["bGreat! In VS Code:
+
+Create file: src/posts/2025-01-30-thinking-fast-and-slow.md
+Paste the content from the artifact
+Save
+
+Final post (#5)! Paste the content for "Creativity, Inc." (with the 
+date: December 2024).Retry<span style="font-family: 
+verdana;">Creativity, Inc.: Overcoming the Unseen Forces That Stand 
+in the Way of True Inspiration by Ed Catmull, co-founder of Pixar 
+Animation Studios, and Amy Wallace, is a comprehensive and insightful 
+guide to managing creativity in a business environment. Here’s a 
+detaipastedE12/14/24 11:32 AM,2024-12-14-creativity-inc.mdCode ---
+title: "Book Review: Creativity, Inc. - Overcoming the Unseen Forces 
+That Stand in the Way of True Inspiration"
+date: 2024-12-14
+description: "A comprehensive guide to managing creativity in 
+business from Ed Catmull, co-founder of Pixar AnimationPerfect! Final 
+post! In VS Code:
+
+Create file: src/posts/2024-12-14-creativity-inc.md
+Paste the content from the artifact
+Save
+
+
+🎉 Step 2 Complete!
+You've now migrated all 5 of your best blog posts to your 11ty site!
+When you refresh your browser at http://localhost:8081/, you should 
+see all 5 posts on your homepage along with the welcome post.
+Ready for Step 3: Deploy to Vercel? This is the exciting part where 
+your site goes live on the internet!
+Let me know when you're ready and I'll walk you through:
+
+Pushing to GitHub
+Connecting to Vercel
+Auto-deploying your site
+
+Are you ready to deploy? 🚀RetryEyes let's gooooo🚀 LET'S DEPLOY THIS 
+THING!
+
+Step 3: Deploy to Vercel
+Part A: Push to GitHub
+First, we need to get your code on GitHub so Vercel can deploy it.
+1. Create a new repository on GitHub:
+
+Go to https://github.com/new
+Repository name: creativemindhabits
+Make it Public (so Vercel free tier works)
+DO NOT check "Add a README file"
+Click Create repository
+
+2. In your Mac Terminal, initialize git and push:
+bashcd ~/creativemindhabits
+git init
+git add .
+git commit -m "Initial commit - 11ty migration complete"
+3. Connect to GitHub:
+GitHub will show you commands on the page. Copy the lines that look 
+like this (but with YOUR username):
+bashgit remote add origin 
+https://github.com/YOUR-USERNAME/creativemindhabits.git
+git branch -M main
+git push -u origin main
+Paste those commands into Terminal and press Enter.
+You might be asked to authenticate with GitHub - just follow the 
+prompts.
+Let me know when your code is pushed to GitHub! Then we'll connect it 
+to Vercel.RetryEokay so i tried to authenticate with password but it 
+says it failedGitHub doesn't accept passwords anymore for command 
+line access. You need to use a Personal Access Token instead.
+Create a GitHub Personal Access Token
+1. Go to GitHub Settings:
+
+Click your profile picture (top right) → Settings
+Scroll down to Developer settings (bottom of left sidebar)
+Click Personal access tokens → Tokens (classic)
+Click Generate new token → Generate new token (classic)
+
+2. Configure the token:
+
+Note: 11ty deployment
+Expiration: 90 days (or your preference)
+Check these scopes:
+
+✅ repo (all of them)
+
+
+Scroll down and click Generate token
+
+3. COPY THE TOKEN IMMEDIATELY!
+
+GitHub shows it only once
+Save it somewhere safe (you'll need it in a moment)
+
+4. Try pushing again:
+In Terminal:
+bashgit push -u origin main
+When it asks for your password, paste the token (not your GitHub 
+password).
+Let me know if this works! If you're still having issues, we can try 
+a different authentication method.RetryEmaybe username is wrong?Good 
+catch! Let's check. When Terminal asks for credentials, it wants:
+Username: Your GitHub username (not your email)
+Password: The Personal Access Token you just created
+
+Find Your GitHub Username
+
+Go to https://github.com
+Click your profile picture (top right)
+Your username is shown there (it's what appears in your profile URL: 
+github.com/YOUR-USERNAME)
+
+
+Try the push command again:
+bashgit push -u origin main
+When prompted:
+
+Username: Enter your actual GitHub username
+Password: Paste the Personal Access Token
+
+What happens now? Does it work, or do you get a different 
+error?RetryEyeah same errorLet's try a different approach. We'll use 
+SSH instead of HTTPS, which is often more reliable.
+Switch to SSH Authentication
+1. Check if you have an SSH key:
+bashls -al ~/.ssh
+Do you see files like id_rsa and id_rsa.pub or id_ed25519 and 
+id_ed25519.pub?
+If YES: Skip to step 3
+If NO or "No such file or directory": Continue to step 2
+2. Create a new SSH key:
+bashssh-keygen -t ed25519 -C "your-email@example.com"
+(Replace with your actual email)
+Press Enter 3 times (accept defaults, no passphrase for simplicity)
+3. Copy your SSH key:
+bashcat ~/.ssh/id_ed25519.pub
+This will print your public key. Copy the entire output (starts with 
+ssh-ed25519).
+4. Add the key to GitHub:
+
+Go to https://github.com/settings/keys
+Click New SSH key
+Title: Mac Terminal
+Paste your key
+Click Add SSH key
+
+5. Change your remote to SSH:
+bashcd ~/creativemindhabits
+git remote remove origin
+git remote add origin 
+git@github.com:YOUR-USERNAME/creativemindhabits.git
+git push -u origin main
+(Replace YOUR-USERNAME with your actual GitHub username)
+Try this and let me know what happens!RetryEwhat if nothing happened 
+when I enter cat ~/.ssh/id_ed25519.pubIf nothing appeared, it means 
+the SSH key wasn't created. Let's create it now.
+Run this command:
+bashssh-keygen -t ed25519 -C "your-email@example.com"
+```
+
+(Replace `your-email@example.com` with your actual email address)
+
+**You'll see prompts - here's what to do:**
+
+1. `Enter file in which to save the key` → Just press **Enter** 
+(accept default)
+2. `Enter passphrase` → Just press **Enter** (leave it empty)
+3. `Enter same passphrase again` → Press **Enter** again
+
+You should see something like:
+```
+Your identification has been saved in /Users/yourname/.ssh/id_ed25519
+Your public key has been saved in /Users/yourname/.ssh/id_ed25519.pub
+Then run this again:
+bashcat ~/.ssh/id_ed25519.pub
+Now you should see the key! Copy everything that appears (it will 
+start with ssh-ed25519).
+Let me know what you see!RetryEso i enter the first line with my 
+email address but nothing happens just this: > 
+>Ah! The > prompt means the terminal is waiting for you to close a 
+quote. You probably have an unmatched quotation mark.
+Press Control + C to cancel and start over.
+Then try again, making sure the email is in quotes:
+bashssh-keygen -t ed25519 -C "youremail@example.com"
+Make sure:
+
+The opening quote " comes right after -C 
+The closing quote " comes after your email
+No extra quotes or characters
+
+Try that and let me know what happens!RetryEokay i typed it now into 
+the terminal but get this Too many arguments.
+usage: ssh-keygen [-q] [-a rounds] [-b bits] [-C comment] [-f 
+output_keyfile]
+                  [-m format] [-N new_passphrase] [-O option]
+                  [-t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | 
+rsa]
+                  [-w provider] [-Z cipher]
+       ssh-keygen -p [-a rounds] [-f keyfile] [-m format] [-N 
+new_passphrase]
+                   [-P old_passphrase] [-Z cipher]
+       ssh-keygen -i [-f input_keyfile] [-m key_format]
+       ssh-keygen -e [-f input_keyfile] [-m key_format]
+       ssh-keygen -y [-f input_keyfile]
+       ssh-keygen -c [-a rounds] [-C comment] [-f keyfile] [-P 
+passphrase]
+       ssh-keygen -l [-v] [-E fingerprint_hash] [-f input_keyfile]
+       ssh-keygen -B [-f input_keyfile]
+       ssh-keygen -D pkcs11
+       ssh-keygen -F hostname [-lv] [-f known_hosts_file]
+       ssh-keygen -H [-f known_hosts_file]
+       ssh-keygen -K [-a rounds] [-w provider]
+       ssh-keygen -R hostname [-f known_hosts_file]
+       ssh-keygen -r hostname [-g] [-f input_keyfile]
+       ssh-keygen -M generate [-O option] output_file
+       ssh-keygen -M screen [-f input_file] [-O option] output_file
+       ssh-keygen -I certificate_identity -s ca_key [-hU] [-D 
+pkcs11_provider]
+                  [-n principals] [-O option] [-V validity_interval]
+                  [-z serial_number] file ...
+       ssh-keygen -L [-f input_keyfile]
+       ssh-keygen -A [-a rounds] [-f prefix_path]
+       ssh-keygen -k -f krl_file [-u] [-s ca_public] [-z 
+version_number]
+                  file ...
+       ssh-keygen -Q [-l] -f krl_file [file ...]
+       ssh-keygen -Y find-principals -s signature_file -f 
+allowed_signers_file
+       ssh-keygen -Y check-novalidate -n namespace -s signature_file
+       ssh-keygen -Y sign -f key_file -n namespace file ...
+       ssh-keygen -Y verify -f allowed_signers_file -I 
+signer_identity
+                  -n namespace -s signature_file [-r 
+revocation_file]The error means there's something wrong with how you 
+typed the command. Let me give you a foolproof way:
+Copy and paste this EXACT command (then just change the email part):
+bashssh-keygen -t ed25519 -C "hello@creativemindhabits.com"
+Just replace hello@creativemindhabits.com with your actual email 
+address, keeping the quotes.
+Make sure:
+
+There's a space after -C
+The email is wrapped in quotes "
+No extra spaces or characters
+
+Paste it, change the email, press Enter, then press Enter 3 more 
+times for the prompts.
+What happens?RetryEnothing happenes just >You still have an unclosed 
+quote somewhere. Let's clear this and try a simpler approach.
+1. Press Control + C to cancel
+2. Let's skip the email entirely:
+bashssh-keygen -t ed25519
+Just type that exactly and press Enter.
+Then press Enter three times when it asks questions.
+What happens now?RetryEstill >You're stuck in a multi-line input. 
+Let's get out of it:
+Press Control + C multiple times until you see your normal prompt 
+again (should look like username@macbook ~ % or similar).
+Then close Terminal completely:
+
+Press Command + Q to quit Terminal
+
+Open Terminal fresh:
+
+Press Command + Space
+Type "Terminal"
+Press Enter
+
+Now try this simple command:
+bashssh-keygen -t ed25519
+What do you see now?RetryEwhat if it starts with shaPerfect! That's 
+your shell prompt starting (like bash or zsh). You're back to normal!
+Now type:
+bashssh-keygen -t ed25519
+```
+
+And press Enter.
+
+You should see:
+```
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/Users/.../.ssh/id_ed25519):
+Just press Enter (3 times total) to accept all defaults.
+What do you see?RetryEthe key finger print is..... and a code 
+starting with sha... then the keys random art is🎉 Perfect! The SSH 
+key was created successfully!
+Now let's get the key so we can add it to GitHub.
+Run this command:
+bashcat ~/.ssh/id_ed25519.pub
+This will display your public key. It should be a long string 
+starting with ssh-ed25519.
+Copy the ENTIRE output (select it all and press Command + C).
+Then:
+
+Go to https://github.com/settings/keys
+Click New SSH key
+Title: Mac Terminal
+Paste your key in the "Key" field
+Click Add SSH key
+
+Let me know when you've added it to GitHub!RetryEokay doneExcellent! 
+Now let's connect your repo using SSH and push your code.
+In Terminal, run these commands:
+bashcd ~/creativemindhabits
+git remote remove origin
+git remote add origin 
+git@github.com:YOUR-USERNAME/creativemindhabits.git
+(Replace YOUR-USERNAME with your actual GitHub username)
+Then push:
+bashgit push -u origin main
+You might see a message asking "Are you sure you want to continue 
+connecting?" - type yes and press Enter.
+What happens?RetryEi get this The authenticity of host 'github.com 
+(20.200.245.247)' can't be established.Perfect! That's normal for the 
+first time connecting to GitHub via SSH.
+Type yes and press Enter.
+This adds GitHub to your list of trusted hosts. You'll only see this 
+once.
+What happens after you type yes?RetryE[new branch]      main -> main
+branch 'main' set up to track 'origin/main'.🎉 YES! Your code is now 
+on GitHub!
+
+Part B: Deploy to Vercel
+Now let's get your site live on the internet!
+1. Go to https://vercel.com
+
+Click Sign Up (or Log In if you have an account)
+Choose Continue with GitHub
+Authorize Vercel to access your GitHub
+
+2. Once logged in:
+
+Click Add New → Project
+You should see your creativemindhabits repository
+Click Import next to it
+
+3. Configure the project:
+
+Framework Preset: Should auto-detect as "Other" or "11ty" (either is 
+fine)
+Build Command: npm run build
+Output Directory: _site
+Click Deploy
+
+Vercel will now build and deploy your site! This takes about 1-2 
+minutes.
+Let me know when you see "Congratulations" or when the deployment 
+finishes! 🚀RetryEInvalid request: framework should be equal to one 
+of the allowed values "blitzjs, nextjs, gatsby, remix, react-router, 
+astro, hexo, eleventy, docusaurus-2, docusaurus, preact, 
+solidstart-1, solidstart, dojo, ember, vue, scully, ionic-angular, 
+angular, polymer, svelte, sveltekit, sveltekit-1, ionic-react, 
+create-react-app, gridsome, umijs, sapper, saber, stencil, nuxtjs, 
+redwoodjs, hugo, jekyll, brunch, middleman, zola, hydrogen, vite, 
+vitepress, vuepress, parcel, fastapi, flask, fasthtml, sanity-v3, 
+sanity, storybook, nitro, hono, express, h3, nestjs, xmcp, ".Ah! 
+Vercel needs you to select "eleventy" as the framework.
+On the configuration page:
+
+Find Framework Preset dropdown
+Select "eleventy" (or "Eleventy") from the list
+The other settings should auto-fill:
+
+Build Command: npm run build
+Output Directory: _site
+
+
+Click Deploy
+
+What happens now?RetryEmaybe it needs environment variablesNo 
+environment variables needed for your site! Your site is just static 
+HTML/CSS/JS.
+Just leave the "Environment Variables" section empty and click 
+Deploy.
+Vercel will now build your site. You'll see a build log with 
+progress.
+What's happening on screen? Do you see the build starting?RetryEso i 
+think it didnt't deply itsays no production deploymentThat's okay! 
+Let's check what's happening.
+Look for a "Deployments" tab or "Visit" button on the Vercel 
+dashboard.
+Or try this:
+
+Go to https://vercel.com/dashboard
+Click on your creativemindhabits project
+Do you see any deployments listed?
+What's the status? (Building, Ready, Error?)
+
+What do you see on your Vercel dashboard?RetryEYour Production Domain 
+is not serving traffic.... and info under deployments tabGood! The 
+deployment is there. Click on the deployment under the "Deployments" 
+tab to see what happened.
+Click on the most recent deployment (should be at the top of the 
+list).
+This will show you:
+
+Build logs
+Whether it succeeded or failed
+Any error messages
+
+What do you see? Is there a status like "Building", "Ready", 
+"Failed", or "Error"?RetryEoh sorry i mean no info under the 
+deployments tab just emptyThat's strange! Let's try manually 
+triggering a deployment.
+Try this:
+
+On your Vercel project page, look for a "Redeploy" or "Deploy" button
+Or go to the Settings tab → Git section
+Make sure your GitHub repository is connected
+
+Or let's force a new deployment by making a small change:
+In your Terminal:
+bashcd ~/creativemindhabits
+git commit --allow-empty -m "Trigger Vercel deployment"
+git push
+This pushes an empty commit that should trigger Vercel to deploy.
+Wait a minute, then refresh your Vercel dashboard. Do you see a 
+deployment now?RetryEso im srill getting this error after force 
+deploy The vercel.json schema validation failed with the following 
+message: framework should be equal to one of the allowed values 
+"blitzjs, nextjs, gatsby, remix, react-router, astro, hexo, eleventy, 
+docusaurus-2, docusaurus, preact, solidstart-1, soliAh! The issue is 
+in your vercel.json file. Let's fix it.
+In VS Code:
+
+Open vercel.json (it's in the root of your project)
+Find the line with "framework"
+Change whatever value is there to "eleventy"
+
+It should look like:
+json{
+  "framework": "eleventy",
+  "buildCommand": "npm run build",
+  "outputDirectory": "_site"
+}
+Save the file.
+Then push the fix:
+bashcd ~/creativemindhabits
+git add vercel.json
+git commit -m "Fix framework setting"
+git push
+Now check Vercel again - does the deployment start?RetryEokay 
+deployed!🎉🎉🎉 YOUR SITE IS LIVE!!!
+Vercel should show you a URL like creativemindhabits.vercel.app or 
+similar.
+Click the "Visit" button or copy the URL and open it in your browser!
+Does your site load? Can you see your homepage, custom pages, and 
+blog posts?
+
+Once you confirm it's working, we have one final step: Connect your 
+custom domain (creativemindhabits.com)!
+Is the site working? 🚀RetryEyup it's working1  but Blog
+* About
+* Tools give us 404 not foundAh! The navigation links need to be 
+updated. They're still pointing to the old Blogger URLs.
+Let's fix the navigation in your site header.
+In VS Code:
+
+Open src/_includes/layouts/base.njk
+Find the <nav> section (should have links like Blog, About, Tools)
+Update the links to:
+
+html<nav>
+  <a href="/">Home</a>
+  <a href="/about/">About</a>
+  <a href="/tools/">Tools</a>
+  <a href="/creator-systems/">Creator Systems</a>
+  <a href="/prompt-vault/">Prompt Vault</a>
+  <a href="/novel/">Novel</a>
+</nav>
+Save the file.
+Then push:
+bashcd ~/creativemindhabits
+git add .
+git commit -m "Fix navigation links"
+git push
+Vercel will auto-deploy (takes about 1 minute). Then refresh your 
+site and the nav should work!
+Let me know when you've pushed it!RetryEokay this is the nav section: 
+  <nav class="site-nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/pages/about/">About</a></li>
+            <li><a href="/pages/tools/">Tools</a></li>
+          </ul>
+        </nav>Perfect! I see the issue. The links have /pages/ in 
+them, but your pages are at the root level (like /about/, not 
+/pages/about/).
+Update the nav to this:
+html<nav class="site-nav">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/tools/">Tools</a></li>
+    <li><a href="/creator-systems/">Creator Systems</a></li>
+    <li><a href="/prompt-vault/">Prompt Vault</a></li>
+    <li><a href="/novel/">Novel</a></li>
+  </ul>
+</nav>
+Save, then push:
+bashcd ~/creativemindhabits
+git add src/_includes/layouts/base.njk
+git commit -m "Fix navigation URLs"
+git push
+Wait about a minute for Vercel to deploy, then refresh your site. The 
+nav links should work!
+Let me know when it's deployed!RetryEokay deployed and work, but 
+prompt vault page looks very weird:The Prompt Vault page lost its 
+styling because we used inline styles in the Markdown, but they're 
+being stripped out or not rendering properly.
+Let's simplify the page to use your site's existing design system 
+instead of custom inline styles.
+In VS Code, open src/pages/prompt-vault.md and replace ALL the 
+content with this cleaner version:
+markdown---
+title: "The Writer's Code - Prompt Vault"
+layout: layouts/base.njk
+permalink: "/prompt-vault/"
+---
+
+<div style="max-width: 680px; margin: 0 auto;">
+
+<div style="text-align: center; margin-bottom: 3rem;">
+  <p style="font-size: 0.9em; text-transform: uppercase; 
+letter-spacing: 2px; color: #78716c; margin-bottom: 0.5rem;">Creative 
+Mind Habits</p>
+  <h1>The Writer's Code</h1>
+  <h2 style="font-size: 1.3em; color: #57534e; font-weight: 300; 
+margin-top: 1rem;">Download the Prompt Vault</h2>
+  <p style="color: #78716c; font-style: italic;">A tidy pack of 
+high-signal prompts to unblock drafts, outline faster, and keep your 
+voice intact.</p>
+</div>
+
+## What's Inside
+
+**40+ battle-tested prompts** - Outlines, revision passes, idea 
+warmups, and publishing helpers.
+
+**Voice-safe outputs** - Prompts tuned to protect tone so it still 
+sounds like you.
+
+**Fast start cards** - Pick a card, paste, ship—no overthinking 
+required.
+
+---
+
+## Get the Prompt Vault
+
+Access is email-only. Submit the form and we'll send the download to 
+your inbox.
+
+<div id="cmhSuccessMessage" style="display: none; background: 
+#d1fae5; border: 1px solid #6ee7b7; color: #065f46; padding: 1rem; 
+border-radius: 6px; margin: 2rem 0; text-align: center;">
+✓ Success! Your Prompt Vault is ready.
+<div style="margin-top: 1rem;">
+<a 
+href="https://drive.google.com/file/d/1HUXpaHRVdL0s2RicbGZHTyrxT4rghDAk/view?usp=drive_link" 
+style="display: inline-block; background: #1c1917; color: white; 
+padding: 12px 30px; text-decoration: none; border-radius: 6px; 
+font-weight: 600;">📥 Download the Prompt Vault</a>
+</div>
+</div>
+
+<form id="cmhEmailForm" style="max-width: 500px; margin: 2rem auto;">
+<div style="margin-bottom: 1.25rem;">
+<label for="cmh-name" style="display: block; margin-bottom: 0.5rem; 
+font-weight: 500;">Name</label>
+<input type="text" id="cmh-name" name="name" required 
+placeholder="Your name" style="width: 100%; padding: 12px 16px; 
+border: 1px solid #d6d3d1; border-radius: 6px; font-size: 1em;">
+</div>
+
+<div style="margin-bottom: 1.25rem;">
+<label for="cmh-email" style="display: block; margin-bottom: 0.5rem; 
+font-weight: 500;">Email</label>
+<input type="email" id="cmh-email" name="email" required 
+placeholder="your@email.com" style="width: 100%; padding: 12px 16px; 
+border: 1px solid #d6d3d1; border-radius: 6px; font-size: 1em;">
+</div>
+
+<button type="submit" style="width: 100%; background: #1c1917; color: 
+white; padding: 14px; border: none; border-radius: 6px; font-weight: 
+600; font-size: 1em; cursor: pointer;">Send Me the Vault</button>
+
+<p style="text-align: center; color: #78716c; font-size: 0.85em; 
+margin-top: 1.25rem;">
+Prefer email? Write to <a href="mailto:hello@creativemindhabits.com" 
+style="color: #57534e;">hello@creativemindhabits.com</a>
+</p>
+</form>
+
+---
+
+**Creative Mind Habits — The Writer's Code**  
+Prompts, tools & tiny systems that keep you writing.
+
+</div>
+
+<script src="/assets/js/prompt-vault-form.js"></script>
+Save, then push:
+bashgit add src/pages/prompt-vault.md
+git commit -m "Simplify prompt vault styling"
+git push
+Wait for Vercel to deploy and check it again. Should look much 
+better!RetryEokay better but still feels cramped, i feel like at the 
+top it has "creative mind habits" but it feels repetitive... nothing 
+feels cohesive about this... I think maybe the heading should be 
+prompt vaultYou're absolutely right! Let's make it cleaner and more 
+cohesive. The page should feel like part of your site, not a separate 
+landing page.
+Replace the entire src/pages/prompt-vault.md content with this 
+cleaner version:
+markdown---
+title: "Prompt Vault"
+layout: layouts/base.njk
+permalink: "/prompt-vault/"
+---
+
+# Prompt Vault
+
+A tidy pack of high-signal prompts to unblock drafts, outline faster, 
+and keep your voice intact.
+
+## What's Inside
+
+**40+ battle-tested prompts** — Outlines, revision passes, idea 
+warmups, and publishing helpers.
+
+**Voice-safe outputs** — Prompts tuned to protect tone so it still 
+sounds like you.
+
+**Fast start cards** — Pick a card, paste, ship—no overthinking 
+required.
+
+---
+
+## Get the Vault
+
+Access is email-only. Submit the form and we'll send the download to 
+your inbox.
+
+<div id="cmhSuccessMessage" style="display: none; background: 
+#d1fae5; border: 1px solid #6ee7b7; color: #065f46; padding: 1rem; 
+border-radius: 6px; margin: 2rem 0; text-align: center;">
+✓ Success! Your Prompt Vault is ready.
+<div style="margin-top: 1rem;">
+<a 
+href="https://drive.google.com/file/d/1HUXpaHRVdL0s2RicbGZHTyrxT4rghDAk/view?usp=drive_link" 
+style="display: inline-block; background: #1c1917; color: white; 
+padding: 12px 30px; text-decoration: none; border-radius: 6px; 
+font-weight: 600;">Download the Prompt Vault</a>
+</div>
+</div>
+
+<form id="cmhEmailForm" style="max-width: 500px; margin: 2rem 0;">
+
+<label for="cmh-name" style="display: block; margin-bottom: 0.5rem; 
+font-weight: 500;">Name</label>
+<input type="text" id="cmh-name" name="name" required 
+placeholder="Your name" style="width: 100%; padding: 12px 16px; 
+border: 1px solid #d6d3d1; border-radius: 6px; font-size: 1em; 
+margin-bottom: 1.25rem;">
+
+<label for="cmh-email" style="display: block; margin-bottom: 0.5rem; 
+font-weight: 500;">Email</label>
+<input type="email" id="cmh-email" name="email" required 
+placeholder="your@email.com" style="width: 100%; padding: 12px 16px; 
+border: 1px solid #d6d3d1; border-radius: 6px; font-size: 1em; 
+margin-bottom: 1.25rem;">
+
+<button type="submit" style="width: 100%; background: #1c1917; color: 
+white; padding: 14px; border: none; border-radius: 6px; font-weight: 
+600; font-size: 1em; cursor: pointer;">Send Me the Vault</button>
+
+<p style="text-align: center; color: #78716c; font-size: 0.85em; 
+margin-top: 1.25rem;">
+Prefer email? Write to <a 
+href="mailto:hello@creativemindhabits.com">hello@creativemindhabits.com</a>
+</p>
+
+</form>
+
+<script src="/assets/js/prompt-vault-form.js"></script>
+Save and push:
+bashgit add src/pages/prompt-vault.md
+git commit -m "Simplify prompt vault page"
+git push
+Much cleaner! It'll now match your site's design and feel cohesive. 
+Check it when it deploys!RetryElet me give you an example ofwhat a 
+good page looks .. this is creator systems. the prompt vault page has 
+the the "Get the vault line" too close to the divider line. 
+Everything feels like it's just one blob of textYou're absolutely 
+right! The page needs better spacing and visual hierarchy. Let me add 
+proper breathing room.
+Replace src/pages/prompt-vault.md with this better-spaced version:
+markdown---
+title: "Prompt Vault"
+layout: layouts/base.njk
+permalink: "/prompt-vault/"
+---
+
+# Prompt Vault
+
+A tidy pack of high-signal prompts to unblock drafts, outline faster, 
+and keep your voice intact.
+
+## What's Inside
+
+**40+ battle-tested prompts** — Outlines, revision passes, idea 
+warmups, and publishing helpers.
+
+**Voice-safe outputs** — Prompts tuned to protect tone so it still 
+sounds like you.
+
+**Fast start cards** — Pick a card, paste, ship—no overthinking 
+required.
+
+<div style="height: 3rem;"></div>
+
+---
+
+<div style="height: 3rem;"></div>
+
+## Get the Vault
+
+Access is email-only. Submit the form and we'll send the download to 
+your inbox.
+
+<div style="height: 2rem;"></div>
+
+<div id="cmhSuccessMessage" style="display: none; background: 
+#d1fae5; border: 1px solid #6ee7b7; color: #065f46; padding: 1.5rem; 
+border-radius: 8px; margin-bottom: 2rem; text-align: center;">
+<strong>✓ Success! Your Prompt Vault is ready.</strong>
+<div style="margin-top: 1rem;">
+<a 
+href="https://drive.google.com/file/d/1HUXpaHRVdL0s2RicbGZHTyrxT4rghDAk/view?usp=drive_link" 
+style="display: inline-block; background: #1c1917; color: white; 
+padding: 14px 32px; text-decoration: none; border-radius: 6px; 
+font-weight: 600;">Download the Prompt Vault</a>
+</div>
+</div>
+
+<form id="cmhEmailForm" style="max-width: 500px;">
+
+<div style="margin-bottom: 1.5rem;">
+<label for="cmh-name" style="display: block; margin-bottom: 0.75rem; 
+font-weight: 500; color: #44403c;">Name</label>
+<input type="text" id="cmh-name" name="name" required 
+placeholder="Your name" style="width: 100%; padding: 14px 16px; 
+border: 1px solid #d6d3d1; border-radius: 6px; font-size: 1em;">
+</div>
+
+<div style="margin-bottom: 1.5rem;">
+<label for="cmh-email" style="display: block; margin-bottom: 0.75rem; 
+font-weight: 500; color: #44403c;">Email</label>
+<input type="email" id="cmh-email" name="email" required 
+placeholder="your@email.com" style="width: 100%; padding: 14px 16px; 
+border: 1px solid #d6d3d1; border-radius: 6px; font-size: 1em;">
+</div>
+
+<button type="submit" style="width: 100%; background: #1c1917; color: 
+white; padding: 16px; border: none; border-radius: 6px; font-weight: 
+600; font-size: 1em; cursor: pointer; transition: background 
+0.2s;">Send Me the Vault</button>
+
+<p style="text-align: center; color: #78716c; font-size: 0.9em; 
+margin-top: 1.5rem; line-height: 1.6;">
+Prefer email? Write to <a href="mailto:hello@creativemindhabits.com" 
+style="color: #57534e; text-decoration: 
+underline;">hello@creativemindhabits.com</a>
+</p>
+
+</form>
+
+<div style="height: 3rem;"></div>
+
+<div style="padding: 1.5rem; border: 1px solid #e7e5e4; 
+border-radius: 8px; background: #fafaf9; color: #57534e; line-height: 
+1.7;">
+These tools are free while I'm building them and will join a larger 
+paid library soon. Want early access and creative system updates? <a 
+href="https://thewriterscode.beehiiv.com/subscribe" target="_blank" 
+rel="noopener" style="color: #292524; text-decoration: 
+underline;">Join the newsletter</a>.
+</div>
+
+<script src="/assets/js/prompt-vault-form.js"></script>
+Save and push:
+bashgit add src/pages/prompt-vault.md
+git commit -m "Add proper spacing to prompt vault page"
+git push
+Much better spacing now! Should feel more like the Creator Systems 
+page.RetryEokay what about the google sheets script to pull the 
+emailGood question! The form is already set up to send to your Google 
+Sheet - remember you gave me the script URL earlier:
+https://script.google.com/macros/s/AKfycbwVH1fU_hBU6xBS2lCz8W81YxZZLHB_bOUCiMOkjGa9294obpHfwO4jaO3BNQi9GpYD/exec
+That's already in your src/assets/js/prompt-vault-form.js file.
+Let's test it:
+
+Go to your live site: 
+https://creativemindhabits.vercel.app/prompt-vault/
+Fill out the form with a test email
+Submit it
+Check your Google Sheet - did the submission appear?
+
+If it works: You're all set! ✅
+If it doesn't work: We'll need to check:
+
+Is the Google Apps Script deployed and accessible?
+Is the URL correct in the JS file?
+
+Try testing the form and let me know what happens!RetryEokay it 
+works! But still not excited about this page and how it looks.Let's 
+make it look more like your Creator Systems page - with a proper card 
+design!
+Replace src/pages/prompt-vault.md with this card-based layout:
+markdown---
+title: "Prompt Vault"
+layout: layouts/base.njk
+permalink: "/prompt-vault/"
+---
+
+<div style="margin-bottom: 3rem;">
+  <p style="font-size: 0.85em; text-transform: uppercase; 
+letter-spacing: 3px; color: #78716c; margin-bottom: 0.75rem; 
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif; font-weight: 500;">Creative Mind Habits</p>
+  <h1 style="margin-bottom: 1rem;">The Writer's Code — Prompt 
+Vault</h1>
+  <p style="color: #57534e; font-size: 1.15em; line-height: 1.6;">A 
+tidy pack of high-signal prompts to unblock drafts, outline faster, 
+and keep your voice intact.</p>
+</div>
+
+<div style="background: white; border: 1px solid #e7e5e4; 
+border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0, 
+0, 0, 0.05); margin-bottom: 2rem;">
+  <div style="height: 3px; background: #57534e;"></div>
+  <div style="padding: 2.5rem;">
+    
+    <h2 style="margin-bottom: 1.5rem; font-size: 1.5em;">What's 
+Inside</h2>
+    
+    <div style="margin-bottom: 1.5rem;">
+      <strong style="color: #292524;">40+ battle-tested 
+prompts</strong>
+      <p style="color: #57534e; margin-top: 0.5rem;">Outlines, 
+revision passes, idea warmups, and publishing helpers.</p>
+    </div>
+    
+    <div style="margin-bottom: 1.5rem;">
+      <strong style="color: #292524;">Voice-safe outputs</strong>
+      <p style="color: #57534e; margin-top: 0.5rem;">Prompts tuned to 
+protect tone so it still sounds like you.</p>
+    </div>
+    
+    <div style="margin-bottom: 0;">
+      <strong style="color: #292524;">Fast start cards</strong>
+      <p style="color: #57534e; margin-top: 0.5rem;">Pick a card, 
+paste, ship—no overthinking required.</p>
+    </div>
+    
+  </div>
+</div>
+
+<div style="background: #f5f5f4; border: 1px solid #e7e5e4; 
+border-radius: 8px; padding: 2.5rem; margin-bottom: 2rem;">
+  
+  <h2 style="text-align: center; margin-bottom: 0.5rem; font-size: 
+1.5em;">Get the Prompt Vault</h2>
+  <p style="text-align: center; color: #57534e; margin-bottom: 
+2rem;">Access is email-only. Submit the form and we'll send the 
+download to your inbox.</p>
+  
+  <div id="cmhSuccessMessage" style="display: none; background: 
+#d1fae5; border: 1px solid #6ee7b7; color: #065f46; padding: 1.5rem; 
+border-radius: 6px; margin-bottom: 2rem; text-align: center; 
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif;">
+    <strong>✓ Success! Your Prompt Vault is ready.</strong>
+    <div style="margin-top: 1rem;">
+      <a 
+href="https://drive.google.com/file/d/1HUXpaHRVdL0s2RicbGZHTyrxT4rghDAk/view?usp=drive_link" 
+style="display: inline-block; background: #1c1917; color: white; 
+padding: 14px 32px; text-decoration: none; border-radius: 6px; 
+font-weight: 600;">📥 Download the Prompt Vault</a>
+    </div>
+  </div>
+  
+  <form id="cmhEmailForm" style="max-width: 500px; margin: 0 auto;">
+    
+    <div style="margin-bottom: 1.25rem;">
+      <label for="cmh-name" style="display: block; color: #44403c; 
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif; font-weight: 500; margin-bottom: 0.5rem; font-size: 
+0.9em;">Name</label>
+      <input type="text" id="cmh-name" name="name" required 
+placeholder="Your name" style="width: 100%; padding: 12px 16px; 
+border: 1px solid #d6d3d1; border-radius: 6px; font-size: 1em; 
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif; background: white;">
+    </div>
+    
+    <div style="margin-bottom: 1.25rem;">
+      <label for="cmh-email" style="display: block; color: #44403c; 
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif; font-weight: 500; margin-bottom: 0.5rem; font-size: 
+0.9em;">Email</label>
+      <input type="email" id="cmh-email" name="email" required 
+placeholder="your@email.com" style="width: 100%; padding: 12px 16px; 
+border: 1px solid #d6d3d1; border-radius: 6px; font-size: 1em; 
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif; background: white;">
+    </div>
+    
+    <button type="submit" style="width: 100%; background: #1c1917; 
+color: white; padding: 14px; border: none; border-radius: 6px; 
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif; font-weight: 600; font-size: 1em; cursor: pointer; 
+transition: background 0.2s;">Send Me the Vault</button>
+    
+    <p style="text-align: center; color: #78716c; font-size: 0.85em; 
+margin-top: 1.25rem; line-height: 1.6;">
+      Prefer email? Write to <a 
+href="mailto:hello@creativemindhabits.com" style="color: #57534e; 
+text-decoration: underline;">hello@creativemindhabits.com</a>
+    </p>
+    
+  </form>
+  
+</div>
+
+<div style="padding: 1.5rem; border: 1px solid #e7e5e4; 
+border-radius: 8px; background: white; color: #57534e; line-height: 
+1.7;">
+  These prompts are free while I'm building the full Creative Systems 
+Library. Want early access and updates? <a 
+href="https://thewriterscode.beehiiv.com/subscribe" target="_blank" 
+rel="noopener" style="color: #292524; text-decoration: 
+underline;">Join the newsletter</a>.
+</div>
+
+<script src="/assets/js/prompt-vault-form.js"></script>
+Save and push:
+bashgit add src/pages/prompt-vault.md
+git commit -m "Redesign prompt vault with card layout"
+git push
+Now it has the same card-based design as your Creator Systems page! 
+Much better visual hierarchy.RetryEit's better but i feel like the 
+email input section is far away from the text textboc explaining what 
+it is. Alot of space between each benefitYou're right! Let's tighten 
+it up - less space between benefits and bring the form closer to the 
+heading.
+Replace src/pages/prompt-vault.md with this tighter version:
+markdown---
+title: "Prompt Vault"
+layout: layouts/base.njk
+permalink: "/prompt-vault/"
+---
+
+<div style="margin-bottom: 3rem;">
+  <p style="font-size: 0.85em; text-transform: uppercase; 
+letter-spacing: 3px; color: #78716c; margin-bottom: 0.75rem; 
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif; font-weight: 500;">Creative Mind Habits</p>
+  <h1 style="margin-bottom: 1rem;">The Writer's Code — Prompt 
+Vault</h1>
+  <p style="color: #57534e; font-size: 1.15em; line-height: 1.6;">A 
+tidy pack of high-signal prompts to unblock drafts, outline faster, 
+and keep your voice intact.</p>
+</div>
+
+<div style="background: white; border: 1px solid #e7e5e4; 
+border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0, 
+0, 0, 0.05); margin-bottom: 2rem;">
+  <div style="height: 3px; background: #57534e;"></div>
+  <div style="padding: 2.5rem;">
+    
+    <h2 style="margin-bottom: 1rem; font-size: 1.5em;">What's 
+Inside</h2>
+    
+    <div style="margin-bottom: 1rem;">
+      <strong style="color: #292524;">40+ battle-tested 
+prompts</strong>
+      <p style="color: #57534e; margin-top: 0.25rem; margin-bottom: 
+0;">Outlines, revision passes, idea warmups, and publishing 
+helpers.</p>
+    </div>
+    
+    <div style="margin-bottom: 1rem;">
+      <strong style="color: #292524;">Voice-safe outputs</strong>
+      <p style="color: #57534e; margin-top: 0.25rem; margin-bottom: 
+0;">Prompts tuned to protect tone so it still sounds like you.</p>
+    </div>
+    
+    <div style="margin-bottom: 0;">
+      <strong style="color: #292524;">Fast start cards</strong>
+      <p style="color: #57534e; margin-top: 0.25rem; margin-bottom: 
+0;">Pick a card, paste, ship—no overthinking required.</p>
+    </div>
+    
+  </div>
+</div>
+
+<div style="background: #f5f5f4; border: 1px solid #e7e5e4; 
+border-radius: 8px; padding: 2.5rem; margin-bottom: 2rem;">
+  
+  <h2 style="text-align: center; margin-bottom: 0.5rem; font-size: 
+1.5em;">Get the Prompt Vault</h2>
+  <p style="text-align: center; color: #57534e; margin-bottom: 
+1.5rem;">Access is email-only. Submit the form and we'll send the 
+download to your inbox.</p>
+  
+  <div id="cmhSuccessMessage" style="display: none; background: 
+#d1fae5; border: 1px solid #6ee7b7; color: #065f46; padding: 1.5rem; 
+border-radius: 6px; margin-bottom: 1.5rem; text-align: center; 
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif;">
+    <strong>✓ Success! Your Prompt Vault is ready.</strong>
+    <div style="margin-top: 1rem;">
+      <a 
+href="https://drive.google.com/file/d/1HUXpaHRVdL0s2RicbGZHTyrxT4rghDAk/view?usp=drive_link" 
+style="display: inline-block; background: #1c1917; color: white; 
+padding: 14px 32px; text-decoration: none; border-radius: 6px; 
+font-weight: 600;">📥 Download the Prompt Vault</a>
+    </div>
+  </div>
+  
+  <form id="cmhEmailForm" style="max-width: 500px; margin: 0 auto;">
+    
+    <div style="margin-bottom: 1rem;">
+      <label for="cmh-name" style="display: block; color: #44403c; 
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif; font-weight: 500; margin-bottom: 0.5rem; font-size: 
+0.9em;">Name</label>
+      <input type="text" id="cmh-name" name="name" required 
+placeholder="Your name" style="width: 100%; padding: 12px 16px; 
+border: 1px solid #d6d3d1; border-radius: 6px; font-size: 1em; 
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif; background: white;">
+    </div>
+    
+    <div style="margin-bottom: 1rem;">
+      <label for="cmh-email" style="display: block; color: #44403c; 
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif; font-weight: 500; margin-bottom: 0.5rem; font-size: 
+0.9em;">Email</label>
+      <input type="email" id="cmh-email" name="email" required 
+placeholder="your@email.com" style="width: 100%; padding: 12px 16px; 
+border: 1px solid #d6d3d1; border-radius: 6px; font-size: 1em; 
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif; background: white;">
+    </div>
+    
+    <button type="submit" style="width: 100%; background: #1c1917; 
+color: white; padding: 14px; border: none; border-radius: 6px; 
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif; font-weight: 600; font-size: 1em; cursor: pointer; 
+transition: background 0.2s;">Send Me the Vault</button>
+    
+    <p style="text-align: center; color: #78716c; font-size: 0.85em; 
+margin-top: 1rem; line-height: 1.6;">
+      Prefer email? Write to <a 
+href="mailto:hello@creativemindhabits.com" style="color: #57534e; 
+text-decoration: underline;">hello@creativemindhabits.com</a>
+    </p>
+    
+  </form>
+  
+</div>
+
+<div style="padding: 1.5rem; border: 1px solid #e7e5e4; 
+border-radius: 8px; background: white; color: #57534e; line-height: 
+1.7;">
+  These prompts are free while I'm building the full Creative Systems 
+Library. Want early access and updates? <a 
+href="https://thewriterscode.beehiiv.com/subscribe" target="_blank" 
+rel="noopener" style="color: #292524; text-decoration: 
+underline;">Join the newsletter</a>.
+</div>
+
+<script src="/assets/js/prompt-vault-form.js"></script>
+Save and push:
+bashgit add src/pages/prompt-vault.md
+git commit -m "Tighten spacing on prompt vault"
+git push
+Much tighter now! Benefits are closer together and form is closer to 
+the heading.RetryEfinally the about section feels cramped ,  can 
+uhelp fix itAbsolutely! Let's add better spacing to the About page.
+In VS Code, open src/pages/about.md and replace with this 
+better-spaced version:
+markdown---
+title: "About"
+layout: layouts/base.njk
+permalink: "/about/"
+---
+
+<div style="text-align: center; margin-bottom: 4rem;">
+  <p style="font-size: 0.85em; text-transform: uppercase; 
+letter-spacing: 3px; color: #78716c; margin-bottom: 1rem; 
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif; font-weight: 500;">Creative Mind Habits</p>
+  <h1 style="font-size: 2.6em; line-height: 1.3; margin-bottom: 
+1.5rem;">A creative lab for people who think too much, feel deeply, 
+and build things anyway.</h1>
+  <p style="font-size: 1.2em; color: #57534e; font-style: 
+italic;">CMH turns messy process into useful systems for writers and 
+self-directed learners.</p>
+</div>
+
+## The Idea
+
+Creative Mind Habits began as a notebook with too many tabs open. 
+Today it's a small ecosystem (part blog, part studio, part archive) 
+documenting how to create with intention in the algorithm age.
+
+I explore systems, storytelling, and reflection—then share what 
+actually helps others find focus, rhythm, and voice.
+
+<div style="height: 2rem;"></div>
+
+## What You'll Find
+
+- **Simple creative systems** (Notion dashboards, prompts, templates) 
+to support momentum, not pressure.
+- **Essays & spiral logs** on burnout, voice, and rebuilding your 
+creative rhythm.
+- **Tools & labs** that make writing and thinking more human, not 
+just optimized.
+- **Language-learning notes** and other maker journeys shared in 
+progress.
+
+<div style="height: 2rem;"></div>
+
+## If You're Here, You Probably…
+
+- Have twenty tabs open but still chase clarity.
+- Write to understand yourself (and the world).
+- Believe growth is messy but worth documenting.
+- Want systems that feel like *support*, not surveillance.
+
+<div style="height: 2rem;"></div>
+
+<div style="background: #f5f5f4; border: 1px solid #e7e5e4; 
+border-radius: 6px; padding: 2.5rem; margin: 3rem 0; text-align: 
+center;">
+  <h3 style="margin-bottom: 1.5rem;">Creative Operating 
+Principles</h3>
+  <p>Progress over polish • Share from the middle • Build slowly, 
+intentionally • Make weird, helpful things • Rest > rush • Spiral → 
+reflect → grow → repeat</p>
+</div>
+
+<div style="text-align: center; padding: 2.5rem 0; margin: 3rem 0; 
+border-top: 1px solid #e7e5e4; border-bottom: 1px solid #e7e5e4;">
+  <p style="font-size: 1.1em; margin-bottom: 1.5rem;">Ready to 
+explore?</p>
+  <p>
+    <a href="/tools/" style="display: inline-block; padding: 14px 
+28px; background: #1c1917; color: white; text-decoration: none; 
+border-radius: 6px; font-weight: 600; margin: 0.5rem;">Explore Tools 
+→</a>
+    <a href="/creator-systems/" style="display: inline-block; 
+padding: 14px 28px; background: white; color: #292524; 
+text-decoration: none; border: 1px solid #d6d3d1; border-radius: 6px; 
+font-weight: 600; margin: 0.5rem;">See Creator Systems</a>
+    <a href="https://thewriterscode.beehiiv.com/subscribe" 
+style="display: inline-block; padding: 14px 28px; background: white; 
+color: #292524; text-decoration: none; border: 1px solid #d6d3d1; 
+border-radius: 6px; font-weight: 600; margin: 0.5rem;" 
+target="_blank" rel="noopener">Join The Writer's Code</a>
+  </p>
+</div>
+
+<div style="background: #f5f5f4; border-left: 3px solid #57534e; 
+padding: 2rem; margin: 3rem 0; border-radius: 4px;">
+  <p style="font-weight: 600; font-size: 1.1em; margin-bottom: 
+0.75rem;">About the creator</p>
+  <p>Written and built by <strong>Em</strong> — a writer, teacher, 
+and creative systems designer. I build spaces for people who learn, 
+write, and rebuild themselves through small, intentional habits.</p>
+  <p style="margin-bottom: 0;">Creative Mind Habits is my long-term 
+project to turn curiosity, reflection, and structure into tools 
+anyone can use.</p>
+</div>
+
+<p style="text-align: center; color: #78716c; font-style: italic; 
+margin-top: 3rem;">Thanks for being here. We'll figure it out 
+together.</p>
+Save and push:
+bashgit add src/pages/about.md
+git commit -m "Add better spacing to about page"
+git push
+Much better breathing room now! Sections have clear 
+separation.RetryEokay great!🎉 Awesome! Your site is looking great!
+
+Final Step: Connect Your Custom Domain
+Right now your site is at creativemindhabits.vercel.app. Let's 
+connect it to creativemindhabits.com!
+In Vercel:
+
+Go to your project dashboard
+Click Settings → Domains
+Add your domain: creativemindhabits.com
+Also add: www.creativemindhabits.com
+Vercel will show you DNS records to add
+
+Then update your DNS (wherever your domain is registered):
+You'll need to add these records (Vercel will show you the exact 
+values):
+
+A Record for @ pointing to Vercel's IP
+CNAME Record for www pointing to cname.vercel-dns.com
+
+Where is your domain registered? (GoDaddy, Namecheap, Google Domains, 
+etc.)
+Once you add the DNS records, it can take a few minutes to a few 
+hours to propagate, then your site will be live at 
+creativemindhabits.com!
+Want to do this now, or are you good to stop here for today? 
+🚀RetryEokay before i do this, how will it affect my current blogger 
+siteGreat question! Here's what will happen:
+Impact on Your Blogger Site
+When you point your domain to Vercel:
+
+creativemindhabits.com will show your NEW 11ty site (on Vercel)
+Your OLD Blogger site will still exist at 
+creativemindhabits.blogspot.com
+All your old Blogger posts will still be there - they just won't be 
+at the custom domain anymore
+
+What This Means
+✅ Your old content is safe - nothing gets deleted from Blogger
+✅ Old links to creativemindhabits.blogspot.com will still work
+❌ Old links to creativemindhabits.com/old-post will break (they'll 
+404 unless you've migrated those posts)
+The Good News
+You've already migrated your 5 best posts to the new site! So your 
+most important content is already on the new 11ty site.
+Should You Connect the Domain Now?
+Option A: Connect it now - your new clean site goes live immediately
+Option B: Wait and migrate more posts first, then connect the domain
+What would you prefer? Since you only migrated 5 posts and Blogger 
+probably has more, you might get some 404s for posts you haven't 
+migrated yet.RetryEhow does the 404 affect my rankinhGood SEO 
+thinking! Here's the impact:
+How 404s Affect SEO
+Short term (first few weeks):
+
+Google will try to crawl your old URLs and find 404s
+This can hurt rankings for those specific pages
+You might see a temporary drop in search traffic
+
+Long term:
+
+Google eventually removes 404 pages from search results
+Your site's overall domain authority isn't permanently damaged
+But you lose the SEO value of those old posts
+
+Better Approach: Set Up Redirects
+Instead of letting posts 404, you have options:
+Option 1: Keep Blogger for now
+
+Don't connect the domain yet
+Migrate more posts first (maybe 10-15 key posts?)
+Then switch the domain
+
+Option 2: Redirect old posts to relevant new content
+
+Create a redirect map in Vercel
+Old post URLs redirect to similar new content or homepage
+Preserves some SEO value
+
+Option 3: Create a "catch-all" page
+
+Any 404 shows a helpful page saying "This content moved to our new 
+site, browse here..."
+Not ideal for SEO but better than blank 404s
+
+My Recommendation
+Don't connect the domain today. Instead:
+
+Keep your current Blogger site live for now
+Build out more content on the 11ty site (maybe 10-15 more posts)
+Then switch the domain with proper redirects
+
+Does that make sense? Want to stop here and migrate more posts later 
+before going live?RetryEI think let's connect the domainAlright, 
+let's do it! 🚀
+Step 4: Connect Your Custom Domain
+1. In Vercel:
+
+Go to your creativemindhabits project
+Click Settings → Domains
+Enter creativemindhabits.com and click Add
+Also add www.creativemindhabits.com and click Add
+
+Vercel will show you DNS records that look something like:
+Type: A
+Name: @
+Value: 76.76.21.21 (example IP)
+
+Type: CNAME
+Name: www
+Value: cname.vercel-dns.com
+2. Where is your domain registered?
+
+GoDaddy?
+Namecheap?
+Google Domains?
+Somewhere else?
+
+Let me know and I'll walk you through updating the DNS records there!
+What do you see in Vercel after adding the domains?RetryEokay 
+namecheapPerfect! Let's update your DNS in Namecheap.
+Update DNS in Namecheap
+1. Log into Namecheap:
+
+Go to namecheap.com and log in
+Go to Domain List
+Click Manage next to creativemindhabits.com
+
+2. Go to Advanced DNS:
+
+Click the Advanced DNS tab
+
+3. Delete old records (if any):
+
+Look for any existing A Records or CNAME Records pointing to Blogger
+Delete them (you can take a screenshot first as backup)
+
+4. Add Vercel's DNS records:
+First, what records is Vercel showing you?
+Look in Vercel under Settings → Domains. It should show something 
+like:
+A Record: @ → [some IP address]
+CNAME: www → cname.vercel-dns.com
+Tell me what Vercel is showing you, and I'll help you add them 
+correctly to Namecheap!RetryEand i see dns records and vercel dns for 
+both creativemindhabits.com and www.creativemindhabits.comPerfect! 
+Now let's add those to Namecheap.
+In Namecheap (Advanced DNS tab):
+1. Add the A Record:
+
+Click Add New Record
+Type: A Record
+Host: @
+Value: 76.76.21.21 (use the IP Vercel shows you)
+TTL: Automatic
+Click the green checkmark ✓
+
+2. Add the CNAME Record:
+
+Click Add New Record
+Type: CNAME Record
+Host: www
+Value: cname.vercel-dns.com
+TTL: Automatic
+Click the green checkmark ✓
+
+3. Save all changes
+
+Important: DNS propagation can take 5 minutes to 48 hours (usually 
+15-30 minutes).
+Back in Vercel, refresh the Domains page after a few minutes. The 
+domains should change from "Invalid Configuration" to a checkmark ✓ 
+when they're working.
+Let me know when you've added both records to Namecheap!
+Then we wait for DNS to propagate and your site will be live at 
+creativemindhabits.com! 🎉RetryEokay how do i know which one to 
+delete for name records, as I also have gmail connected on 
+namecheapDO NOT delete any MX records or TXT records! Those are for 
+your Gmail.
+Only delete:
+Look for records with these characteristics:
+
+Type: A Record with Host @ pointing to an IP that's NOT Vercel's
+Type: CNAME Record with Host www pointing to Blogger (might say 
+something like ghs.google.com or blogspot.com)
+
+Keep ALL of these (for Gmail):
+
+MX Records (anything with "mail" or "mx")
+TXT Records (for email verification)
+Any records with Host like mail, smtp, imap, etc.
+
+Can you tell me what A Records and CNAME Records you currently see? 
+(Just the Host and Value for each)
+Then I'll tell you exactly which ones to delete!RetryEyay it 
+works🎉🎉🎉 CONGRATULATIONS!!!
+Your site is LIVE at creativemindhabits.com! 🚀
+
+What We Accomplished Today (Weekend 1 Complete!)
+✅ Migrated from Blogger to 11ty - Custom static site with full 
+control
+✅ Added 5 custom pages - About, Tools, Prompt Vault, Creator 
+Systems, Novel tracker
+✅ Migrated 5 best blog posts - Book reviews and essays
+✅ Deployed to Vercel - Auto-deploys from GitHub
+✅ Connected custom domain - creativemindhabits.com is live!
+✅ Working email capture form - Prompt Vault connected to Google 
+Sheets
+
+Your Site Stack
+
+11ty (Eleventy) - Static site generator
+GitHub - Version control
+Vercel - Hosting with auto-deploy
+Custom domain - creativemindhabits.com
+
+
+What's Next (Future Weekends)
+When you're ready to continue:
+
+Migrate more blog posts from Blogger
+Add more custom pages
+Tweak styling
+Set up redirects from old Blogger URLs (optional)
+
+
+Total time today: About 4 hours (as planned!)
+You now have a fast, elegant, completely custom site that you 
+control. No more WordPress bloat, no Blogger limitations. Just clean, 
+beautiful content.
+How do you feel? 🎊RetryEokay so let's focus on tweaking styling 
+todayPerfect! Let's make your site look even better.
+What would you like to tweak?
+Here are some areas we could work on:
+Typography & Spacing:
+
+Font sizes (headings, body text)
+Line heights and paragraph spacing
+Letter spacing
+
+Colors:
+
+Adjust the stone palette
+Link colors
+Button styles
+
+Layout:
+
+Homepage post grid spacing
+Blog post layout (width, margins)
+Navigation styling
+
+Specific Pages:
+
+Any page that still feels off?
+Post pages need work?
+
+Other Elements:
+
+Add a footer with social links?
+Newsletter signup on homepage?
+Date formatting on posts?
+
+What's bothering you most about the current design? Or what specific 
+element would you like to improve first?RetryEso at first glance... 
+it looks like the header on mobile blocks the content as you scroll. 
+Ideally it should disappear as you scroll the page is visibleGreat 
+catch! Let's make the header hide when scrolling down and reappear 
+when scrolling up.
+In VS Code, open src/_includes/layouts/base.njk
+Find the <header> section and add a class to it:
+html<header class="site-header">
+Then, at the bottom of the file (right before the closing </body> 
+tag), add this JavaScript:
+html<script>
+let lastScroll = 0;
+const header = document.querySelector('.site-header');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  
+  if (currentScroll <= 0) {
+    header.classList.remove('scroll-up');
+    return;
+  }
+  
+  if (currentScroll > lastScroll && 
+!header.classList.contains('scroll-down')) {
+    // Scrolling down
+    header.classList.remove('scroll-up');
+    header.classList.add('scroll-down');
+  } else if (currentScroll < lastScroll && 
+header.classList.contains('scroll-down')) {
+    // Scrolling up
+    header.classList.remove('scroll-down');
+    header.classList.add('scroll-up');
+  }
+  
+  lastScroll = currentScroll;
+});
+</script>
+Now open src/assets/css/style.css and add these styles at the bottom:
+css.site-header {
+  position: sticky;
+  top: 0;
+  transition: transform 0.3s ease;
+  z-index: 100;
+}
+
+.site-header.scroll-down {
+  transform: translateY(-100%);
+}
+
+.site-header.scroll-up {
+  transform: translateY(0);
+}
+Save both files, then push:
+bashgit add .
+git commit -m "Add hide-on-scroll header behavior"
+git push
+The header will now hide when scrolling down and show when scrolling 
+up! Test it on mobile when it deploys.RetryEokay it's better but when 
+it disappears it removes the header "creative mind habits", also the 
+entire menu"home" "about"..... feels like it takes  up alot of space 
+on the home pageGood points! Let's fix both issues:
+
+Make the header smaller/more compact
+Fix the disappearing behavior so it works smoothly
+
+In src/assets/css/style.css, find the header-related styles and 
+update them:
+css/* Header adjustments */
+.site-header {
+  position: sticky;
+  top: 0;
+  transition: transform 0.3s ease;
+  z-index: 100;
+  background: #fafaf9;
+  border-bottom: 1px solid #e7e5e4;
+}
+
+.site-header.scroll-down {
+  transform: translateY(-100%);
+}
+
+.site-header.scroll-up {
+  transform: translateY(0);
+}
+
+.site-header .container {
+  padding: 1rem 1.5rem; /* Reduced from default */
+}
+
+.site-title {
+  font-size: 1.25rem; /* Make site title smaller */
+  margin-bottom: 0.5rem;
+}
+
+.site-tagline {
+  font-size: 0.85rem; /* Make tagline smaller */
+  margin-bottom: 0.75rem;
+}
+
+.site-nav ul {
+  gap: 1rem; /* Tighten nav spacing */
+}
+
+.site-nav a {
+  font-size: 0.9rem; /* Smaller nav links */
+  padding: 0.25rem 0; /* Less padding */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .site-header .container {
+    padding: 0.75rem 1rem;
+  }
+  
+  .site-title {
+    font-size: 1.1rem;
+  }
+  
+  .site-tagline {
+    font-size: 0.8rem;
+  }
+  
+  .site-nav a {
+    font-size: 0.85rem;
+  }
+}
+Save and push:
+bashgit add src/assets/css/style.css
+git commit -m "Make header more compact"
+git push
+This will make the header take up much less space. If you want it 
+even smaller, let me know and we can reduce it further!Retry/* 
+============================================
+   CREATIVE MIND HABITS
+   Elegant, Literary, Sophisticated
+   ============================================ */
+
+/* === RESET & BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'GpastedEokay this is my current css.style...I see! 
+Let me add the compact header styles to your existing CSS.
+Replace the header section in your src/assets/css/style.css with this 
+more compact version:
+css/* === HEADER === */
+.site-header {
+  background: white;
+  border-bottom: 1px solid #e7e5e4;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+
+.site-header.scroll-down {
+  transform: translateY(-100%);
+}
+
+.site-header.scroll-up {
+  transform: translateY(0);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0; /* Reduced from 1.5rem */
+  flex-wrap: wrap;
+  gap: 0.75rem; /* Reduced from 1rem */
+}
+
+.site-title {
+  font-size: 1.3rem; /* Reduced from 1.8rem */
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.site-title a {
+  text-decoration: none;
+  color: #1c1917;
+}
+
+.site-tagline {
+  color: #78716c;
+  font-size: 0.8rem; /* Reduced from 0.9rem */
+  font-style: italic;
+  margin: 0.15rem 0 0 0; /* Reduced from 0.25rem */
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 1rem; /* Reduced from 1.5rem */
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif;
+  font-size: 0.85rem; /* Reduced from 0.9rem */
+  font-weight: 500;
+  text-decoration: none;
+  color: #57534e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.25rem 0; /* Reduced from 0.5rem */
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: #1c1917;
+  border-bottom-color: #57534e;
+}
+And update the mobile section:
+css/* === MOBILE RESPONSIVE === */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .container {
+    padding: 0 1.25rem;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 0; /* Even more compact on mobile */
+  }
+  
+  .site-title {
+    font-size: 1.1rem; /* Smaller on mobile */
+  }
+  
+  .site-tagline {
+    font-size: 0.75rem; /* Smaller on mobile */
+  }
+  
+  .site-nav ul {
+    flex-direction: column;
+    gap: 0.5rem; /* Tighter on mobile */
+    width: 100%;
+  }
+  
+  .site-nav a {
+    font-size: 0.8rem; /* Smaller on mobile */
+  }
+  
+  .site-main {
+    padding: 2.5rem 0;
+  }
+  
+  .posts-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .post-single {
+    padding: 2rem 1.5rem;
+  }
+  
+  .post-title {
+    font-size: 2rem;
+  }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+  
+  .post-nav {
+    flex-direction: column;
+  }
+}
+Save and push:
+bashgit add src/assets/css/style.css
+git commit -m "Make header much more compact"
+git push
+This makes the header significantly smaller and takes up way less 
+space on mobile!RetryElet's take a step back i liked the size of 
+"Creative Mind Habits" and the subtitle "Prompts, tools & tiny 
+systems that keep you writing" however the menu on mobile seems too 
+long, so we need a way to click on mobile so it appears instead of it 
+just being there looking instrusive. On desktop it's fine cause there 
+is space for it. It looks good. Home
+* About
+* Tools
+* Creator Systems
+* Prompt Vault
+* NovelPerfect! Let's add a hamburger menu for mobile that hides the 
+navigation behind a button.
+First, update src/_includes/layouts/base.njk - find the header 
+section and replace it with this:
+html<header class="site-header">
+  <div class="container">
+    <div class="header-content">
+      <div class="site-branding">
+        <h1 class="site-title">
+          <a href="/">Creative Mind Habits</a>
+        </h1>
+        <p class="site-tagline">Prompts, tools & tiny systems that 
+keep you writing</p>
+      </div>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <nav class="site-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/tools/">Tools</a></li>
+          <li><a href="/creator-systems/">Creator Systems</a></li>
+          <li><a href="/prompt-vault/">Prompt Vault</a></li>
+          <li><a href="/novel/">Novel</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+Then, update your CSS - replace the entire header section in 
+src/assets/css/style.css:
+css/* === HEADER === */
+.site-header {
+  background: white;
+  border-bottom: 1px solid #e7e5e4;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+
+.site-header.scroll-down {
+  transform: translateY(-100%);
+}
+
+.site-header.scroll-up {
+  transform: translateY(0);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  gap: 1rem;
+  position: relative;
+}
+
+.site-title {
+  font-size: 1.8rem;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.site-title a {
+  text-decoration: none;
+  color: #1c1917;
+}
+
+.site-tagline {
+  color: #78716c;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 0.25rem 0 0 0;
+}
+
+/* Hamburger menu button (hidden on desktop) */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 101;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #1c1917;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #57534e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: #1c1917;
+  border-bottom-color: #57534e;
+}
+Now add mobile-specific styles - replace the mobile section:
+css/* === MOBILE RESPONSIVE === */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .container {
+    padding: 0 1.25rem;
+  }
+  
+  /* Show hamburger on mobile */
+  .nav-toggle {
+    display: flex;
+  }
+  
+  .header-content {
+    flex-wrap: nowrap;
+    padding: 1rem 0;
+  }
+  
+  /* Hide nav by default on mobile */
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-bottom: 1px solid #e7e5e4;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .site-nav.active {
+    max-height: 400px;
+  }
+  
+  .site-nav ul {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    padding: 1rem 1.5rem;
+  }
+  
+  .site-nav li {
+    border-bottom: 1px solid #f5f5f4;
+  }
+  
+  .site-nav li:last-child {
+    border-bottom: none;
+  }
+  
+  .site-nav a {
+    display: block;
+    padding: 0.75rem 0;
+    border-bottom: none;
+  }
+  
+  .site-main {
+    padding: 2.5rem 0;
+  }
+  
+  .posts-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .post-single {
+    padding: 2rem 1.5rem;
+  }
+  
+  .post-title {
+    font-size: 2rem;
+  }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+  
+  .post-nav {
+    flex-direction: column;
+  }
+}
+Finally, add the JavaScript - at the bottom of base.njk before the 
+closing </body> tag, add:
+html<script>
+// Mobile menu toggle
+const navToggle = document.querySelector('.nav-toggle');
+const siteNav = document.querySelector('.site-nav');
+
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    siteNav.classList.toggle('active');
+  });
+  
+  // Close menu when clicking a link
+  const navLinks = document.querySelectorAll('.site-nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.classList.remove('active');
+      siteNav.classList.remove('active');
+    });
+  });
+}
+
+// Hide header on scroll
+let lastScroll = 0;
+const header = document.querySelector('.site-header');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  
+  if (currentScroll <= 0) {
+    header.classList.remove('scroll-up');
+    return;
+  }
+  
+  if (currentScroll > lastScroll && 
+!header.classList.contains('scroll-down')) {
+    header.classList.remove('scroll-up');
+    header.classList.add('scroll-down');
+  } else if (currentScroll < lastScroll && 
+header.classList.contains('scroll-down')) {
+    header.classList.remove('scroll-down');
+    header.classList.add('scroll-up');
+  }
+  
+  lastScroll = currentScroll;
+});
+</script>
+Save and push:
+bashgit add .
+git commit -m "Add hamburger menu for mobile"
+git push
+Now on mobile you'll see a hamburger icon (☰) that opens/closes the 
+menu, keeping the header clean! On desktop, the menu stays visible as 
+normal.RetryEokay and what about the size of site title and 
+subtitleLet's revert the site title and tagline back to the original 
+larger sizes you liked!
+In src/assets/css/style.css, find the .site-title and .site-tagline 
+styles and update them:
+css.site-title {
+  font-size: 1.8rem; /* Keep the original size */
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.site-title a {
+  text-decoration: none;
+  color: #1c1917;
+}
+
+.site-tagline {
+  color: #78716c;
+  font-size: 0.9rem; /* Keep the original size */
+  font-style: italic;
+  margin: 0.25rem 0 0 0;
+}
+These should already be at the right size from your original CSS! The 
+hamburger menu will handle hiding the navigation on mobile, so the 
+title and tagline can stay nice and prominent.
+Save and push:
+bashgit add src/assets/css/style.css
+git commit -m "Keep original site title and tagline sizes"
+git push
+Perfect! Now you have:
+
+✅ Full-size title and tagline (looks great!)
+✅ Hidden navigation on mobile (hamburger menu)
+✅ Full navigation on desktop (plenty of space)
+
+Test it when it deploys!RetryEokay can you give me everything in one 
+simple copy and paste formatAbsolutely! Here's everything in one go:
+
+1. Update src/_includes/layouts/base.njk
+Find the <header> section and replace it with:
+html<header class="site-header">
+  <div class="container">
+    <div class="header-content">
+      <div class="site-branding">
+        <h1 class="site-title">
+          <a href="/">Creative Mind Habits</a>
+        </h1>
+        <p class="site-tagline">Prompts, tools & tiny systems that 
+keep you writing</p>
+      </div>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <nav class="site-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/tools/">Tools</a></li>
+          <li><a href="/creator-systems/">Creator Systems</a></li>
+          <li><a href="/prompt-vault/">Prompt Vault</a></li>
+          <li><a href="/novel/">Novel</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+Then find the JavaScript at the bottom (before </body>) and replace 
+with:
+html<script>
+// Mobile menu toggle
+const navToggle = document.querySelector('.nav-toggle');
+const siteNav = document.querySelector('.site-nav');
+
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    siteNav.classList.toggle('active');
+  });
+  
+  // Close menu when clicking a link
+  const navLinks = document.querySelectorAll('.site-nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.classList.remove('active');
+      siteNav.classList.remove('active');
+    });
+  });
+}
+
+// Hide header on scroll
+let lastScroll = 0;
+const header = document.querySelector('.site-header');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  
+  if (currentScroll <= 0) {
+    header.classList.remove('scroll-up');
+    return;
+  }
+  
+  if (currentScroll > lastScroll && 
+!header.classList.contains('scroll-down')) {
+    header.classList.remove('scroll-up');
+    header.classList.add('scroll-down');
+  } else if (currentScroll < lastScroll && 
+header.classList.contains('scroll-down')) {
+    header.classList.remove('scroll-down');
+    header.classList.add('scroll-up');
+  }
+  
+  lastScroll = currentScroll;
+});
+</script>
+
+2. Replace ENTIRE src/assets/css/style.css with:
+css/* ============================================
+   CREATIVE MIND HABITS
+   Elegant, Literary, Sophisticated
+   ============================================ */
+
+/* === RESET & BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: #fafaf9;
+  color: #292524;
+  line-height: 1.7;
+  font-size: 1.0625rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Georgia', serif;
+  font-weight: 400;
+  color: #1c1917;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+  margin: 0 0 1rem 0;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.3rem; }
+
+a {
+  color: #292524;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #1c1917;
+}
+
+p {
+  color: #44403c;
+  line-height: 1.7;
+  margin: 1rem 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* === LAYOUT === */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* === HEADER === */
+.site-header {
+  background: white;
+  border-bottom: 1px solid #e7e5e4;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+
+.site-header.scroll-down {
+  transform: translateY(-100%);
+}
+
+.site-header.scroll-up {
+  transform: translateY(0);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  gap: 1rem;
+  position: relative;
+}
+
+.site-title {
+  font-size: 1.8rem;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.site-title a {
+  text-decoration: none;
+  color: #1c1917;
+}
+
+.site-tagline {
+  color: #78716c;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 0.25rem 0 0 0;
+}
+
+/* Hamburger menu button (hidden on desktop) */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 101;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #1c1917;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #57534e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: #1c1917;
+  border-bottom-color: #57534e;
+}
+
+/* === MAIN CONTENT === */
+.site-main {
+  padding: 3.75rem 0;
+  min-height: 70vh;
+}
+
+/* === POST GRID === */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin: 2.5rem 0;
+}
+
+.post-card {
+  background: white;
+  border: 1px solid #e7e5e4;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.post-card-image {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  border-bottom: 1px solid #e7e5e4;
+  background: #f5f5f4;
+}
+
+.post-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 0;
+}
+
+.post-card:hover .post-card-image img {
+  transform: scale(1.05);
+}
+
+.post-card-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card-title {
+  font-size: 1.5rem;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.3;
+}
+
+.post-card-title a {
+  text-decoration: none;
+  color: #1c1917;
+}
+
+.post-card-title a:hover {
+  color: #292524;
+}
+
+.post-card-meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif;
+  font-size: 0.85rem;
+  color: #78716c;
+  margin-bottom: 0.75rem;
+}
+
+.post-card-excerpt {
+  color: #57534e;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.post-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin-top: auto;
+}
+
+.post-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #f5f5f4;
+  border: 1px solid #e7e5e4;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  color: #44403c;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif;
+}
+
+.post-tag:hover {
+  background: #e7e5e4;
+}
+
+.read-more {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  background: #1c1917;
+  color: white !important;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  align-self: flex-start;
+  transition: background 0.2s ease;
+  margin-top: 1rem;
+}
+
+.read-more:hover {
+  background: #292524;
+}
+
+/* === SINGLE POST === */
+.post-single {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid #e7e5e4;
+  border-radius: 8px;
+  padding: 3rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.post-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e7e5e4;
+}
+
+.post-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.post-meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+sans-serif;
+  font-size: 0.9rem;
+  color: #78716c;
+}
+
+.post-image {
+  margin: 2rem 0;
+}
+
+.post-image img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.post-content {
+  color: #44403c;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.post-content ul,
+.post-content ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.post-content li {
+  margin: 0.5rem 0;
+  color: #44403c;
+}
+
+.post-content blockquote {
+  border-left: 3px solid #57534e;
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #57534e;
+}
+
+.post-content code {
+  background: #f5f5f4;
+  padding: 0.125rem 0.375rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.post-content pre {
+  background: #f5f5f4;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.post-content pre code {
+  background: none;
+  padding: 0;
+}
+
+.post-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e7e5e4;
+}
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.post-nav a {
+  color: #44403c;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  background: #f5f5f4;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.post-nav a:hover {
+  background: #e7e5e4;
+}
+
+/* === FOOTER === */
+.site-footer {
+  background: white;
+  border-top: 1px solid #e7e5e4;
+  padding: 3rem 0;
+  margin-top: 5rem;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-content p {
+  color: #78716c;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.footer-tagline {
+  font-style: italic;
+}
+
+/* === MOBILE RESPONSIVE === */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .container {
+    padding: 0 1.25rem;
+  }
+  
+  /* Show hamburger on mobile */
+  .nav-toggle {
+    display: flex;
+  }
+  
+  .header-content {
+    flex-wrap: nowrap;
+    padding: 1rem 0;
+  }
+  
+  /* Hide nav by default on mobile */
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-bottom: 1px solid #e7e5e4;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .site-nav.active {
+    max-height: 400px;
+  }
+  
+  .site-nav ul {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    padding: 1rem 1.5rem;
+  }
+  
+  .site-nav li {
+    border-bottom: 1px solid #f5f5f4;
+  }
+  
+  .site-nav li:last-child {
+    border-bottom: none;
+  }
+  
+  .site-nav a {
+    display: block;
+    padding: 0.75rem 0;
+    border-bottom: none;
+  }
+  
+  .site-main {
+    padding: 2.5rem 0;
+  }
+  
+  .posts-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .post-single {
+    padding: 2rem 1.5rem;
+  }
+  
+  .post-title {
+    font-size: 2rem;
+  }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+  
+  .post-nav {
+    flex-direction: column;
+  }
+}
+
+/* === UTILITIES === */
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+.home-intro {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+Then save and push:
+bashgit add .
+git commit -m "Add hamburger mobile menu"
+git push
+Done! Copy, paste, save, push. 🚀RetryEplease create a well craft 
+essay for me which is a way to introduce the new site we ust 
+created... heres what i have so far... 🧠 Building a Thinking Studio 
+in the Age of Noise
+Lately I’ve been asking: what does it mean to think deeply in a time 
+when everything moves too fast to remember?
+We live in an era of abundance — information, opinions, frameworks, 
+hacks. Yet somehow, it feels like our minds are starving. We scroll, 
+we collect, we save — but rarely digest. Most of us are running 
+creative studios built for output, not understanding.
+I wanted Creative Mind Habits to be something different — a thinking 
+studio.
+1. The Studio as Practice
+A studio isn’t just where you make things; it’s where you return to 
+yourself. Painters mix colors. Musicians rehearse scales. Writers 
+wrestle with silence. What all of them share is a habit of showing up 
+— not to publish, but to explore.
+A thinking studio works the same way. It’s a space to test ideas, 
+revisit curiosities, and build a long-term relationship with 
+knowledge. It’s slow, deliberate, and often private. But it’s where 
+clarity begins.
+2. The Noise We’re Escaping
+Skim culture rewards speed over sense. Algorithms favor engagement 
+over insight. In the process, thinking becomes fragmented — little 
+bursts of opinion without depth.
+But every time you pause to read slowly, annotate a paragraph, or 
+rewrite a thought until it makes sense, you’re rebuilding your 
+capacity for depth. You’re training your attention like a muscle. 
+You’re building a studio that no algorithm can optimize away.
+3. The Systems That Keep You Grounded
+A thinking studio isn’t built on inspiration alone. It’s built on 
+systems that protect attention:
+* Rituals of input: what you read, watch, and listen to with 
+intention.
+* Routines of reflection: how you process what stays with you.
+* Tools of translation: how your notes become essays, ideas, and 
+creative output.
+CMH exists as a record of those systems — the creative scaffolding 
+behind a more meaningful kind of work.
+4. The Point Isn’t to Think More — It’s to Think Better
+The real power of a thinking studio is focus. It’s not about 
+consuming everything; it’s about consuming with purpose. Every post, 
+review, and reflection here is a small act of resistance against the 
+shallow pull of “next.”
+To think better is to build better. And to build better is to live 
+with more coherence.
+5. Welcome to the Studio
+Creative Mind Habits has always been a lab — for writing, for 
+learning, for becoming. This next chapter is about building the 
+architecture of thought behind it. A studio that values slow ideas, 
+deliberate creation, and the courage to keep showing up — even when 
+no one’s watching.
+Because the work of thinking isn’t loud. But it lasts.This is 
+beautiful and thoughtful! Let me refine it while keeping your voice 
+and adding more context about the actual site migration. Here's a 
+polished version:
+
+Building a Thinking Studio in the Age of Noise
+Lately I've been asking: what does it mean to think deeply in a time 
+when everything moves too fast to remember?
+We live in an era of abundance — information, opinions, frameworks, 
+hacks. Yet somehow, it feels like our minds are starving. We scroll, 
+we collect, we save — but rarely digest. Most of us are running 
+creative studios built for output, not understanding.
+I wanted Creative Mind Habits to be something different. Not just 
+another blog. A thinking studio.
+1. The Studio as Practice
+A studio isn't just where you make things; it's where you return to 
+yourself. Painters mix colors. Musicians rehearse scales. Writers 
+wrestle with silence. What all of them share is a habit of showing up 
+— not to publish, but to explore.
+A thinking studio works the same way. It's a space to test ideas, 
+revisit curiosities, and build a long-term relationship with 
+knowledge. It's slow, deliberate, and often private. But it's where 
+clarity begins.
+That's why I rebuilt this site from the ground up. Not because the 
+old platform was broken, but because the architecture of your 
+creative space matters. Every unnecessary plugin, every 
+templateRetryEany more?Yes! Here's the complete polished essay:
+
+Building a Thinking Studio in the Age of Noise
+Lately I've been asking: what does it mean to think deeply in a time 
+when everything moves too fast to remember?
+We live in an era of abundance — information, opinions, frameworks, 
+hacks. Yet somehow, it feels like our minds are starving. We scroll, 
+we collect, we save — but rarely digest. Most of us are running 
+creative studios built for output, not understanding.
+I wanted Creative Mind Habits to be something different. Not just 
+another blog. A thinking studio.
+1. The Studio as Practice
+A studio isn't just where you make things; it's where you return to 
+yourself. Painters mix colors. Musicians rehearse scales. Writers 
+wrestle with silence. What all of them share is a habit of showing up 
+— not to publish, but to explore.
+A thinking studio works the same way. It's a space to test ideas, 
+revisit curiosities, and build a long-term relationship with 
+knowledge. It's slow, deliberate, and often private. But it's where 
+clarity begins.
+That's why I rebuilt this site from the ground up. Not because the 
+old platform was broken, but because the architecture of your 
+creative space matters. Every unnecessary plugin, every cluttered 
+dashboard, every algorithmic nudge toward "engagement" — they all 
+chip away at the clarity you're trying to build.
+This new space is lighter. Faster. Mine. Built with intention, not 
+templates.
+2. The Noise We're Escaping
+Skim culture rewards speed over sense. Algorithms favor engagement 
+over insight. In the process, thinking becomes fragmented — little 
+bursts of opinion without depth, hot takes without reflection, 
+information without understanding.
+We've normalized reading headlines as if they're full articles. 
+Bookmarking essays we'll never revisit. Reposting thoughts we haven't 
+fully digested. We mistake exposure for learning, consumption for 
+growth.
+But every time you pause to read slowly, annotate a paragraph, or 
+rewrite a thought until it makes sense, you're rebuilding your 
+capacity for depth. You're training your attention like a muscle. 
+You're reclaiming agency over what stays with you.
+You're building a studio that no algorithm can optimize away.
+3. The Systems That Keep You Grounded
+A thinking studio isn't built on inspiration alone. It's built on 
+systems that protect attention and make space for meaning:
+Rituals of input: What you read, watch, and listen to with intention. 
+Not everything, not endlessly — but deliberately, with care for what 
+shapes your thinking.
+Routines of reflection: How you process what stays with you. The 
+Sunday spiral, the weekly review, the simple act of writing to 
+understand rather than to publish.
+Tools of translation: How your notes become essays, ideas become 
+projects, curiosity becomes creative output. The systems that turn 
+consumption into creation.
+CMH exists as a record of those systems — the creative scaffolding 
+behind a more meaningful kind of work. The templates, dashboards, and 
+reflection practices that turn messy process into grounded momentum.
+This site isn't a content library. It's a working studio, shared in 
+progress.
+4. The Point Isn't to Think More — It's to Think Better
+The real power of a thinking studio is focus. It's not about 
+consuming everything; it's about consuming with purpose. Not racing 
+to "stay on top" of endless information streams, but choosing what 
+deserves your sustained attention.
+Every book review here is a form of digestion. Every essay is a way 
+of slowing down. Every system shared is an invitation to build with 
+intention, not just churn content.
+To think better is to build better. And to build better is to live 
+with more coherence — between what you read and what you remember, 
+what you believe and what you create, who you are and who you're 
+becoming.
+5. Welcome to the Studio
+Creative Mind Habits has always been a lab — for writing, for 
+learning, for becoming. This next chapter is about building the 
+architecture of thought behind it.
+This is a studio that values:
+
+Slow ideas over hot takes
+Deliberate creation over algorithmic pressure
+The courage to keep showing up, even when no one's watching
+Systems that support, not surveil
+Progress over polish, always
+
+The site you're reading now was built in a weekend. Not because speed 
+matters, but because starting matters more than perfecting. It's 
+clean, simple, and entirely under my control. No bloat, no tracking, 
+no optimization theater. Just words, systems, and space to think.
+It will evolve. Pages will be added. Posts will accumulate. Systems 
+will be refined. But the foundation is set: a place built for depth, 
+designed for return, optimized for nothing but clarity.
+Because the work of thinking isn't loud. But it lasts.
+
+If you're here, you're probably building your own studio too — 
+whether you call it that or not. A practice of reading deeply, 
+writing clearly, learning deliberately. A refusal to let speed 
+replace substance.
+Welcome. Let's figure it out together.
+— Em
+
+Would you like me to adjust anything? Add more technical details 
+about the migration? Make it shorter? Different tone?RetryEyou start 
+way to many sentences with cmh bla bla or creative mind habits bla 
+bla... itfeels stoicYou're absolutely right! Let me fix that - make 
+it flow more naturally without constantly name-dropping the site:
+
+Building a Thinking Studio in the Age of Noise
+Lately I've been asking: what does it mean to think deeply in a time 
+when everything moves too fast to remember?
+We live in an era of abundance — information, opinions, frameworks, 
+hacks. Yet somehow, it feels like our minds are starving. We scroll, 
+we collect, we save — but rarely digest. Most of us are running 
+creative studios built for output, not understanding.
+I wanted to build something different. Not just another blog. A 
+thinking studio.
+1. The Studio as Practice
+A studio isn't just where you make things; it's where you return to 
+yourself. Painters mix colors. Musicians rehearse scales. Writers 
+wrestle with silence. What all of them share is a habit of showing up 
+— not to publish, but to explore.
+A thinking studio works the same way. It's a space to test ideas, 
+revisit curiosities, and build a long-term relationship with 
+knowledge. It's slow, deliberate, and often private. But it's where 
+clarity begins.
+That's why I rebuilt this site from the ground up. Not because the 
+old platform was broken, but because the architecture of your 
+creative space matters. Every unnecessary plugin, every cluttered 
+dashboard, every algorithmic nudge toward "engagement" — they all 
+chip away at the clarity you're trying to build.
+This new space is lighter. Faster. Mine. Built with intention, not 
+templates.
+2. The Noise We're Escaping
+Skim culture rewards speed over sense. Algorithms favor engagement 
+over insight. In the process, thinking becomes fragmented — little 
+bursts of opinion without depth, hot takes without reflection, 
+information without understanding.
+We've normalized reading headlines as if they're full articles. 
+Bookmarking essays we'll never revisit. Reposting thoughts we haven't 
+fully digested. We mistake exposure for learning, consumption for 
+growth.
+But every time you pause to read slowly, annotate a paragraph, or 
+rewrite a thought until it makes sense, you're rebuilding your 
+capacity for depth. You're training your attention like a muscle. 
+You're reclaiming agency over what stays with you.
+You're building a studio that no algorithm can optimize away.
+3. The Systems That Keep You Grounded
+A thinking studio isn't built on inspiration alone. It's built on 
+systems that protect attention and make space for meaning:
+Rituals of input: What you read, watch, and listen to with intention. 
+Not everything, not endlessly — but deliberately, with care for what 
+shapes your thinking.
+Routines of reflection: How you process what stays with you. The 
+Sunday spiral, the weekly review, the simple act of writing to 
+understand rather than to publish.
+Tools of translation: How your notes become essays, ideas become 
+projects, curiosity becomes creative output. The systems that turn 
+consumption into creation.
+This site exists as a record of those systems — the creative 
+scaffolding behind more meaningful work. The templates, dashboards, 
+and reflection practices that turn messy process into grounded 
+momentum. Not a content library, but a working studio, shared in 
+progress.
+4. The Point Isn't to Think More — It's to Think Better
+The real power of a thinking studio is focus. It's not about 
+consuming everything; it's about consuming with purpose. Not racing 
+to "stay on top" of endless information streams, but choosing what 
+deserves your sustained attention.
+Every book review here is a form of digestion. Every essay is a way 
+of slowing down. Every system shared is an invitation to build with 
+intention, not just churn content.
+To think better is to build better. And to build better is to live 
+with more coherence — between what you read and what you remember, 
+what you believe and what you create, who you are and who you're 
+becoming.
+5. Welcome to the Studio
+This has always been a lab — for writing, for learning, for becoming. 
+This next chapter is about building the architecture of thought 
+behind it.
+A studio that values:
+
+Slow ideas over hot takes
+Deliberate creation over algorithmic pressure
+The courage to keep showing up, even when no one's watching
+Systems that support, not surveil
+Progress over polish, always
+
+The site you're reading now was built in a weekend. Not because speed 
+matters, but because starting matters more than perfecting. It's 
+clean, simple, and entirely under my control. No bloat, no tracking, 
+no optimization theater. Just words, systems, and space to think.
+It will evolve. Pages will be added. Posts will accumulate. Systems 
+will be refined. But the foundation is set: a place built for depth, 
+designed for return, optimized for nothing but clarity.
+Because the work of thinking isn't loud. But it lasts.
+
+If you're here, you're probably building your own studio too — 
+whether you call it that or not. A practice of reading deeply, 
+writing clearly, learning deliberately. A refusal to let speed 
+replace substance.
+Welcome. Let's figure it out together.
+— Em
+
+Much better! The site name only appears once naturally, and the flow 
+feels more conversational. Want any other tweaks?RetryEalso i dont 
+like the format of "it's not this... it that..."Good catch! Let me 
+rewrite those sections to be more direct and confident:
+
+Building a Thinking Studio in the Age of Noise
+Lately I've been asking: what does it mean to think deeply in a time 
+when everything moves too fast to remember?
+We live in an era of abundance — information, opinions, frameworks, 
+hacks. Yet somehow, it feels like our minds are starving. We scroll, 
+we collect, we save — but rarely digest. Most of us are running 
+creative studios built for output, not understanding.
+I wanted to build something different. Not just another blog. A 
+thinking studio.
+1. The Studio as Practice
+A studio isn't just where you make things; it's where you return to 
+yourself. Painters mix colors. Musicians rehearse scales. Writers 
+wrestle with silence. What all of them share is a habit of showing up 
+— not to publish, but to explore.
+A thinking studio works the same way. A space to test ideas, revisit 
+curiosities, and build a long-term relationship with knowledge. Slow, 
+deliberate, often private. Where clarity begins.
+That's why I rebuilt this site from the ground up. The old platform 
+wasn't broken, but the architecture of your creative space matters. 
+Every unnecessary plugin, every cluttered dashboard, every 
+algorithmic nudge toward "engagement" chips away at the clarity 
+you're trying to build.
+This new space is lighter. Faster. Mine. Built with intention, not 
+templates.
+2. The Noise We're Escaping
+Skim culture rewards speed over sense. Algorithms favor engagement 
+over insight. Thinking becomes fragmented — little bursts of opinion 
+without depth, hot takes without reflection, information without 
+understanding.
+We've normalized reading headlines as full articles. Bookmarking 
+essays we'll never revisit. Reposting thoughts we haven't fully 
+digested. We mistake exposure for learning, consumption for growth.
+But every time you pause to read slowly, annotate a paragraph, or 
+rewrite a thought until it makes sense, you rebuild your capacity for 
+depth. You train your attention like a muscle. You reclaim agency 
+over what stays with you.
+You build a studio that no algorithm can optimize away.
+3. The Systems That Keep You Grounded
+A thinking studio runs on systems that protect attention and make 
+space for meaning:
+Rituals of input: What you read, watch, and listen to with intention. 
+Deliberately, with care for what shapes your thinking.
+Routines of reflection: How you process what stays with you. The 
+Sunday spiral, the weekly review, the simple act of writing to 
+understand rather than to publish.
+Tools of translation: How your notes become essays, ideas become 
+projects, curiosity becomes creative output. Systems that turn 
+consumption into creation.
+This site exists as a record of those systems — the creative 
+scaffolding behind more meaningful work. Templates, dashboards, and 
+reflection practices that turn messy process into grounded momentum. 
+A working studio, shared in progress.
+4. Thinking Better, Building Better
+The real power of a thinking studio comes from focus. Consuming with 
+purpose instead of consuming everything. Choosing what deserves 
+sustained attention instead of racing to "stay on top" of endless 
+information streams.
+Every book review here is a form of digestion. Every essay is a way 
+of slowing down. Every system shared is an invitation to build with 
+intention.
+Think better, build better, live with more coherence — between what 
+you read and what you remember, what you believe and what you create, 
+who you are and who you're becoming.
+5. Welcome to the Studio
+This has always been a lab — for writing, for learning, for becoming. 
+This next chapter builds the architecture of thought behind it.
+A studio that values:
+
+Slow ideas over hot takes
+Deliberate creation over algorithmic pressure
+The courage to keep showing up, even when no one's watching
+Systems that support, not surveil
+Progress over polish, always
+
+The site you're reading now was built in a weekend. Starting matters 
+more than perfecting. Clean, simple, entirely under my control. No 
+bloat, no tracking, no optimization theater. Just words, systems, and 
+space to think.
+It will evolve. Pages will be added. Posts will accumulate. Systems 
+will be refined. But the foundation is set: a place built for depth, 
+designed for return, optimized for nothing but clarity.
+Because the work of thinking isn't loud. But it lasts.
+
+If you're here, you're probably building your own studio too — 
+whether you call it that or not. A practice of reading deeply, 
+writing clearly, learning deliberately. A refusal to let speed 
+replace substance.
+Welcome. Let's figure it out together.
+— Em
+
+Better? More assertive and direct, fewer "not this, but that" 
+constructions.RetryEgood , now let's add some humor and be human in 
+this textPerfect! Let me add some warmth, humor, and personality:
+
+Building a Thinking Studio in the Age of Noise
+Lately I've been asking: what does it mean to think deeply in a time 
+when everything moves too fast to remember?
+We live in an era of abundance — information, opinions, frameworks, 
+hacks. Yet somehow, it feels like our minds are starving. We scroll, 
+we collect, we save (oh, do we save) — but rarely digest. Most of us 
+are running creative studios built for output, not understanding.
+I wanted to build something different. Not just another blog. A 
+thinking studio.
+(And yes, I know how pretentious that sounds. Bear with me.)
+1. The Studio as Practice
+A studio isn't just where you make things; it's where you return to 
+yourself. Painters mix colors. Musicians rehearse scales. Writers 
+wrestle with silence (and occasionally their cats walking across 
+keyboards).
+What all of them share is a habit of showing up — not to publish, but 
+to explore.
+A thinking studio works the same way. A space to test ideas, revisit 
+curiosities, and build a long-term relationship with knowledge. Slow, 
+deliberate, often private. Where clarity begins — usually after the 
+third cup of coffee and deleting the first draft.
+That's why I rebuilt this site from the ground up. The old platform 
+wasn't broken, but the architecture of your creative space matters. 
+Every unnecessary plugin (why did I have seven?), every cluttered 
+dashboard, every algorithmic nudge toward "engagement" chips away at 
+the clarity you're trying to build.
+This new space is lighter. Faster. Mine. Built in a weekend fueled by 
+determination and pasta. No templates, no bloat, just intention.
+2. The Noise We're Escaping
+Skim culture rewards speed over sense. Algorithms favor engagement 
+over insight. Thinking becomes fragmented — little bursts of opinion 
+without depth, hot takes without reflection, information without 
+understanding.
+We've normalized reading headlines as full articles. (Guilty.) 
+Bookmarking essays we'll definitely read later. (Narrator: She did 
+not.) Reposting thoughts we haven't fully digested because they 
+sounded smart and we have 47 tabs open and honestly, who has time?
+We mistake exposure for learning, consumption for growth.
+But here's the thing: every time you pause to read slowly, annotate a 
+paragraph (even just "huh, interesting"), or rewrite a thought until 
+it actually makes sense, you rebuild your capacity for depth. You 
+train your attention like a muscle — and trust me, mine was severely 
+out of shape.
+You reclaim agency over what stays with you.
+You build a studio that no algorithm can optimize away.
+3. The Systems That Keep You Grounded
+A thinking studio runs on systems that protect attention and make 
+space for meaning. Not because systems are sexy (they're not), but 
+because they're the scaffolding that keeps you from drowning in 
+"productivity theater."
+Rituals of input: What you read, watch, and listen to with intention. 
+Deliberately choosing what shapes your thinking instead of 
+doomscrolling at 2 AM wondering where your life went.
+Routines of reflection: How you process what stays with you. The 
+Sunday spiral, the weekly review, the simple act of writing to 
+understand rather than to sound smart on the internet.
+Tools of translation: How your notes become essays, ideas become 
+projects, curiosity becomes creative output. Because having 4,000 
+saved articles means nothing if you never revisit them. (Again, 
+guilty.)
+This site exists as a record of those systems — the creative 
+scaffolding behind more meaningful work. Templates, dashboards, and 
+reflection practices that turn messy process into grounded momentum. 
+A working studio, shared in progress. Mistakes included.
+4. Thinking Better, Building Better
+The real power of a thinking studio comes from focus. Consuming with 
+purpose instead of consuming everything (impossible, by the way). 
+Choosing what deserves sustained attention instead of racing to "stay 
+on top" of endless information streams (also impossible, please stop 
+trying).
+Every book review here is a form of digestion. Every essay is a way 
+of slowing down. Every system shared is an invitation to build with 
+intention.
+Think better, build better, live with more coherence — between what 
+you read and what you remember, what you believe and what you create, 
+who you are and who you're becoming.
+(And yes, I'm still figuring that out too. We're all just works in 
+progress here.)
+5. Welcome to the Studio
+This has always been a lab — for writing, for learning, for becoming. 
+This next chapter builds the architecture of thought behind it.
+A studio that values:
+
+Slow ideas over hot takes
+Deliberate creation over algorithmic pressure
+The courage to keep showing up, even when no one's watching 
+(especially then)
+Systems that support, not surveil
+Progress over polish, always (you should see my drafts folder)
+
+The site you're reading now was built in a weekend. Starting matters 
+more than perfecting. Clean, simple, entirely under my control. No 
+bloat, no tracking, no optimization theater. Just words, systems, and 
+space to think.
+It will evolve. Pages will be added. Posts will accumulate. Systems 
+will be refined. Typos will be fixed (eventually). But the foundation 
+is set: a place built for depth, designed for return, optimized for 
+nothing but clarity.
+Because the work of thinking isn't loud. But it lasts.
+
+If you're here, you're probably building your own studio too — 
+whether you call it that or not. A practice of reading deeply, 
+writing clearly, learning deliberately. A refusal to let speed 
+replace substance. Twenty tabs open but still chasing clarity.
+Welcome. Let's figure it out together. I'll bring the coffee.
+— Em
+
+Much better! More relatable, self-aware, and human. Want me to dial 
+the humor up or down?RetryEi like it but had the em dash alotYou're 
+right! Let me clean up those em dashes:
+
+Building a Thinking Studio in the Age of Noise
+Lately I've been asking: what does it mean to think deeply in a time 
+when everything moves too fast to remember?
+We live in an era of abundance. Information, opinions, frameworks, 
+hacks. Yet somehow, it feels like our minds are starving. We scroll, 
+we collect, we save (oh, do we save), but rarely digest. Most of us 
+are running creative studios built for output, not understanding.
+I wanted to build something different. Not just another blog. A 
+thinking studio.
+(And yes, I know how pretentious that sounds. Bear with me.)
+1. The Studio as Practice
+A studio isn't just where you make things; it's where you return to 
+yourself. Painters mix colors. Musicians rehearse scales. Writers 
+wrestle with silence (and occasionally their cats walking across 
+keyboards).
+What all of them share is a habit of showing up, not to publish, but 
+to explore.
+A thinking studio works the same way. A space to test ideas, revisit 
+curiosities, and build a long-term relationship with knowledge. Slow, 
+deliberate, often private. Where clarity begins, usually after the 
+third cup of coffee and deleting the first draft.
+That's why I rebuilt this site from the ground up. The old platform 
+wasn't broken, but the architecture of your creative space matters. 
+Every unnecessary plugin (why did I have seven?), every cluttered 
+dashboard, every algorithmic nudge toward "engagement" chips away at 
+the clarity you're trying to build.
+This new space is lighter. Faster. Mine. Built in a weekend fueled by 
+determination and pasta. No templates, no bloat, just intention.
+2. The Noise We're Escaping
+Skim culture rewards speed over sense. Algorithms favor engagement 
+over insight. Thinking becomes fragmented. Little bursts of opinion 
+without depth, hot takes without reflection, informatioconst form = 
+document.getElementById('cmhEmailForm');
+const successMessage = document.getElementById('cmhSuccessMessage');
+
+if (form) {
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('cmh-name').value;
+        const email = document.getElementById('cmh-email').value;
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwVH1fU_hBU6xBS2lCz8W81YxZZLHB_bOUCiMOkjGa9294obpHfwO4jaO3BNQi9GpYD/exec';
+        
+        try {
+            await fetch(scriptURL, {
+                method: 'POST',
+                body: JSON.stringify({ 
+                    name: name, 
+                    email: email, 
+                    timestamp: new Date().toISOString(),
+                    source: 'Creative Mind Habits - Prompt Vault'
+                })
+            });
+            
+            successMessage.style.display = 'block';
+            form.reset();
+            
+        } catch (error) {
+            alert('Something went wrong. Please email us directly.');
+        }
+    });
+}
