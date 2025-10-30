@@ -8,11 +8,9 @@ layout: layouts/post.njk
 
 Have you ever wondered **why we make the decisions** we do? Why do we sometimes trust our gut, while at other times, we carefully analyze every detail? These questions lie at the heart of Daniel Kahneman's groundbreaking book, **Thinking, Fast and Slow**. As a Nobel laureate in Economics, Kahneman takes readers on a journey through the human mind, revealing the two systems that drive our thoughts and decisions.
 
-![Thinking Fast and Slow header graphic](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-MXQZ5vH3Q4Ytw0-PlAVNPHOiQdPbesvCUFjXGwslQr-PjOzjzBZS_1xVLtVnqlq7EWT5plVtrE5hceNDCnv9liuPPbUi8xOdAOaEx7abjN9PP4YL1MTRWSe4XD3jrxGO-rlABI9RpoWZY58ZU-q5aZsPUgcYEbTZyYYEB_bYZ3wRnL6D6NDA4hkxoL56/s1200/Thinking%20fast%20and%20slow.png)
 
 This book isn't just for psychologists or economists but it's for anyone curious about why we think and act the way we do. Whether you're a business leader, a student, or simply someone who wants to make better choices, Thinking, Fast and Slow offers profound insights that can transform the way you see the world. Let's find out what he was actually talking about when wrote thinking fast and slow, and perhaps we can learn a think or two ourselves! Let's start with the two systems of thinking.
 
-![Thinking Fast and Slow book cover](https://blogger.googleusercontent.com/img/a/AVvXsEikfPGeibvQon2u2yJk7KCO7wPb2Jz5CyFSnSSuh0hJQIeoZfiVGFTpURCMcQgb6_G6QTap779N2XKFiCd3No6FGyIKoV6dFxp9tAy-3cb3HOTrFM0uvk6wvp-A3G12NYOApKK6zwk9UW4cLEzYG07jFCEqXElyWOuV-wRY_zpRotzUfLa5VN4oQRnrTYjs)
 
 ## The Two Systems of Thinking
 

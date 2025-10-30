@@ -8,15 +8,13 @@ layout: layouts/post.njk
 
 *"I feel like I read everything… but remember nothing."*
 
-![CtrlAltUnderstand header graphic](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj40qwJwWlhz5AIpGa1zr1Cbcc3y3bWZHiSAVQdnmTaqeODJ9Bgq44QVmI_zBgnhkMWhOeNJi4LIknv-uDSbCDAmnsHAcVLQLQVp0kFT8AuQlky16P0duYqj0V2Cjm6wlgYGHd5jgn4zQRbv1Nc1qAcDY13rAjSDQ-je1RTw9nxzBILvf6y5HFI36W9avao/s1200/ctrlaltunderstand2.png)
-
 Yep. That's what this edition is about.
 
 We're surrounded by more content than ever. But instead of feeling informed, we often feel overloaded. Scrolling replaces studying. Liking replaces understanding. And somewhere along the way, **reading became skimming… and thinking became reacting**.
 
 This isn't a lecture. It's a soft spiral. A digital reality check I needed—and maybe you do too.
 
-## 📲 What Skim Culture Looks Like
+## What Skim Culture Looks Like
 
 - Reading headlines like they're full articles
 - Bookmarking essays we'll "get back to" (we won't)
@@ -27,13 +25,13 @@ We skim captions. We skim conversations. We even skim emotions sometimes.
 
 And the weird part? It's not because we're lazy—it's because we're overwhelmed.
 
-## 🤖 AI Made It Easier. Also Trickier.
+## AI Made It Easier. Also Trickier.
 
 Tools like ChatGPT help us summarize and clarify. But they also encourage shortcut thinking. Three bullet points and a nice tone? We call it "depth." But is it really?
 
 AI can simplify. It can't synthesize meaning for you. That's still on us.
 
-## 🧠 Seeming Smart ≠ Thinking Deep
+## Seeming Smart ≠ Thinking Deep
 
 You've seen it too, right? The beautifully worded paragraph that says... almost nothing? The quote everyone reposts, even though no one's quite sure what it means?
 
@@ -41,7 +39,7 @@ We sound fluent. But we're not always slowing down to *actually think*.
 
 Noticing that doesn't make you a cynic. It makes you conscious.
 
-## 🛠️ 3 Gentle Ways to Reclaim Your Brain
+## 3 Gentle Ways to Reclaim Your Brain
 
 - **1. Pick one thing to read all the way through this week.**  
   No multitasking. No tab-switching. Just read. Fully.
@@ -54,9 +52,6 @@ Noticing that doesn't make you a cynic. It makes you conscious.
 
 These aren't productivity hacks. They're just ways to stop thinking in fragments.
 
-## 📖 Missed CTRL+ALT+Understand #1?
-
-[Click here to read Edition 1: The Era of Seeming Smart](https://www.creativemindhabits.com/2025/06/ctrlaltunderstand-1-everyone-sounds.html) — where we unpacked how AI can simulate insight without grounding it in real thought.
 
 This series is a little rebellion. Against performative learning. Against endless scroll. For the people who still want to *understand*.
 
