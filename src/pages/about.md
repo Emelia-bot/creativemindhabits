@@ -38,7 +38,11 @@ I explore systems, storytelling, and reflection—then share what actually helps
 
 <div style="background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 6px; padding: 2.5rem; margin: 3rem 0; text-align: center;">
   <h3 style="margin-bottom: 1.5rem;">Creative Operating Principles</h3>
-  <p>Progress over polish • Share from the middle • Build slowly, intentionally • Make weird, helpful things • Rest > rush • Spiral → reflect → grow → repeat</p>
+  <p style="line-height: 2; margin-bottom: 0;">
+    Progress over polish • Share from the middle • Build slowly, intentionally<br>
+    Make weird, helpful things • Rest > rush<br>
+    Spiral → reflect → grow → repeat
+  </p>
 </div>
 
 <div style="text-align: center; padding: 2.5rem 0; margin: 3rem 0; border-top: 1px solid #e7e5e4; border-bottom: 1px solid #e7e5e4;">
