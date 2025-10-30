@@ -8,7 +8,6 @@ layout: layouts/post.njk
 
 Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration by Ed Catmull, co-founder of Pixar Animation Studios, and Amy Wallace, is a comprehensive and insightful guide to managing creativity in a business environment. Here's a detailed review of the book, highlighting its key themes, practical advice, and the unique perspective it offers.
 
-![Creativity Inc book review header](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZUgGiFaiS8MRShdawfebT72Pb5ZZQWHBxrKKtx0UUu6yonvYKcLBs-lvfJmPfoH0UNz4W7QZY1ZBhj4jXmn3GHv_8C_4nDBNf9GepSvLRrQp4Jk8nuCruJgDJcwue3IE8L-paDIXvmXSNb-rgdnVN7ll1-l_U6_XT32_aiwA6vU-406WWzPUpBwAW0x5V/s1200/Creativity%20Inc%20-%20Book%20Review.png)
 
 ## 1. Background and Author
 
@@ -20,7 +19,6 @@ The book delves into *several critical themes* that are essential for building a
 
 ## Creativity as a Guiding Principle
 
-![People being creative at work](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhAHmceOeNYNxmZXR2l9APaaMMsUhz3jxNf0HiBfTHsrzn-wiXx5J27SQwn228prkcv3UFnrEPhUcu5owNRw5AFZnakR5EPhOoBpTGOSbG4hwsb5bFNWYVQItpziShar5AS5kBYuDuCSTJsc9Na-vjh2ZIkYKwkt_zJsC3jEm_UdCyF9JIpxEWw966geMtE/s1080/Post%2012-%20Book%20Review%20-%20Creativity%20Inc.png)
 
 Catmull emphasizes that creativity is not just an art, but an *incremental process* that requires discipline and continuous improvement. He ties creativity closely to problem-solving, suggesting that both big and small problems stem from the same distribution and can be approached similarly.
 
