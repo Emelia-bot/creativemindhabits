@@ -32,7 +32,7 @@ I make things, learn new skills, and share what works. No polish required, just 
 - Like making things and learning new skills
 - Appreciate seeing the process, not just the result
 - Build systems that support your work
-- Enjoy learning in public
+- Enjoy learning random but interesting stuff
 
 <div style="height: 2rem;"></div>
 
