@@ -14,7 +14,7 @@ permalink: "/now/"
 
 ## Building
 
-Working on a **classroom management web app** for tracking student behavior and seating charts. It's functional and improving daily. Using it in real classes, tweaking as I go.
+Working on a **classroom management web app** for improving student engagement. It's functional and improving daily. Using it in real classes, tweaking as I go.
 
 Just shipped **Ugly Draft Mode** - a web editor that hides your text so you can write without editing yourself into paralysis.
 
