@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+title: All Posts
+permalink: "/posts/"
+---
+
+<div style="max-width: 800px; margin: 0 auto;">
+  <h1 style="margin-bottom: 2rem;">All Posts</h1>
+
+  {% for post in collections.posts %}
+    <article style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e7e5e4;">
+      <h2 style="margin-bottom: 0.5rem;">
+        <a href="{{ post.url }}" style="color: #1c1917; text-decoration: none;">{{ post.data.title }}</a>
+      </h2>
+      <time style="color: #78716c; font-size: 0.9em;">{{ post.date | readableDate }}</time>
+      {% if post.data.description %}
+      <p style="margin-top: 0.75rem; color: #57534e;">{{ post.data.description }}</p>
+      {% endif %}
+    </article>
+  {% endfor %}
+</div>
