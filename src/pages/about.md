@@ -5,7 +5,6 @@ permalink: "/about/"
 ---
 
 <div style="text-align: center; margin-bottom: 4rem;">
-  <p style="font-size: 0.85em; text-transform: uppercase; letter-spacing: 3px; color: #78716c; margin-bottom: 1rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 500;">Creative Mind Habits</p>
   <h1 style="font-size: 2.6em; line-height: 1.3; margin-bottom: 1.5rem;">A space for making, learning, and sharing the process.</h1>
   <p style="font-size: 1.2em; color: #57534e; font-style: italic;">Projects I'm building. Skills I'm learning. Systems that actually work.</p>
 </div>
