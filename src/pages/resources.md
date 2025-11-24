@@ -5,7 +5,6 @@ permalink: "/resources/"
 ---
 
 <div style="margin-bottom: 3rem;">
-  <p style="font-size: 0.85em; text-transform: uppercase; letter-spacing: 3px; color: #78716c; margin-bottom: 0.75rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 500;">Creative Mind Habits</p>
   <h1 style="margin-bottom: 1rem;">Resources & Templates</h1>
   <p style="color: #57534e; font-size: 1.15em; line-height: 1.6;">Tools and systems I've built or use regularly. Free to copy and adapt.</p>
 </div>

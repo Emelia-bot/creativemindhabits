@@ -50,14 +50,13 @@ I make things, learn new skills, and share what works. No polish required, just 
 <div style="text-align: center; padding: 2.5rem 0; margin: 3rem 0; border-top: 1px solid #e7e5e4; border-bottom: 1px solid #e7e5e4;">
   <p style="font-size: 1.1em; margin-bottom: 1.5rem;">Explore</p>
   <p>
-    <a href="/tools/" style="display: inline-block; padding: 14px 28px; background: #1c1917; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; margin: 0.5rem;">Tools & Templates →</a>
-    <a href="/creator-systems/" style="display: inline-block; padding: 14px 28px; background: white; color: #292524; text-decoration: none; border: 1px solid #d6d3d1; border-radius: 6px; font-weight: 600; margin: 0.5rem;">Creator Systems</a>
+    <a href="/resources/" style="display: inline-block; padding: 14px 28px; background: #1c1917; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; margin: 0.5rem;">Resources →</a>
   </p>
 </div>
 
 <div style="background: #f5f5f4; border-left: 3px solid #57534e; padding: 2rem; margin: 3rem 0; border-radius: 4px;">
   <p style="font-weight: 600; font-size: 1.1em; margin-bottom: 0.75rem;">About</p>
-  <p>I'm <strong>Em</strong> — I teach, build web tools, and learn new things constantly. Creative Mind Habits is my home base for sharing all of it.</p>
+  <p>I'm <strong>Em</strong> — I teach, build tools, manage projects, and learn new things constantly. Creative Mind Habits is my home base for sharing all of it.</p>
   <p style="margin-bottom: 0;">This is a long-term project documenting what I make and what I learn along the way.</p>
 </div>
 
