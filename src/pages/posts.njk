@@ -4,18 +4,23 @@ title: All Posts
 permalink: "/posts/"
 ---
 
-<div style="max-width: 800px; margin: 0 auto;">
-  <h1 style="margin-bottom: 2rem;">All Posts</h1>
+<div style="text-align: center; margin-bottom: 4rem;">
+  <p style="font-size: 0.85em; text-transform: uppercase; letter-spacing: 3px; color: #78716c; margin-bottom: 1rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 500;">Archive</p>
+  <h1 style="font-size: 2.6em; margin-bottom: 1rem;">All Posts</h1>
+  <p style="color: #57534e; font-size: 1.1em;">Everything I've written, newest first.</p>
+</div>
 
+<div style="max-width: 800px; margin: 0 auto;">
   {% for post in collections.posts %}
-    <article style="margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e7e5e4;">
-      <h2 style="margin-bottom: 0.5rem;">
+    <article style="margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #e7e5e4;">
+      <time style="display: block; color: #78716c; font-size: 0.9em; margin-bottom: 0.5rem;">{{ post.date | readableDate }}</time>
+      <h2 style="margin-bottom: 0.75rem; font-size: 1.8em; line-height: 1.3;">
         <a href="{{ post.url }}" style="color: #1c1917; text-decoration: none;">{{ post.data.title }}</a>
       </h2>
-      <time style="color: #78716c; font-size: 0.9em;">{{ post.date | readableDate }}</time>
       {% if post.data.description %}
-      <p style="margin-top: 0.75rem; color: #57534e;">{{ post.data.description }}</p>
+      <p style="color: #57534e; line-height: 1.6; margin-bottom: 1rem;">{{ post.data.description }}</p>
       {% endif %}
+      <a href="{{ post.url }}" style="color: #1c1917; text-decoration: none; font-weight: 600; font-size: 0.95em;">Read More →</a>
     </article>
   {% endfor %}
 </div>
