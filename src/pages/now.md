@@ -22,13 +22,12 @@ Just shipped **Ugly Draft Mode** - a web editor that hides your text so you can 
 
 **Korean** - A few months in. Tracking vocabulary, grammar, and practice sessions. Slow and steady.
 
-Still figuring out the teaching license path vs. focusing more on building projects.
 
 ## Reading
 
 Currently: *Inside Coca-Cola* by Neville Isdell - operations, turnarounds, decision-making at scale. Reminding me why I like systems work.
 
-Built out my reading list for the next few months.
+Built out my reading list for the next few months(will post shortly).
 
 ## Writing
 
