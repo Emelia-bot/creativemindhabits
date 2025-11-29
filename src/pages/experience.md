@@ -17,7 +17,7 @@ permalink: "/experience/"
 **Teacher** | 6 years  
 Classroom instruction and curriculum development, currently testing a classroom management web application in real teaching environments.
 
-**Classroom Management Web App** | 6 months  
+**Classroom Management Web App** | 3 months  
 Building and testing a web application designed to improve my teaching practice.
 
 **Ugly Draft Mode** | 2 months  
