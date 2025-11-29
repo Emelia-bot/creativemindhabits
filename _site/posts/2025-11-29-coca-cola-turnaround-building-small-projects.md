@@ -14,7 +14,7 @@ I picked it up because I was curious about systems and operations again. Turns o
 
 Isdell inherited a company that was moving fast but in too many directions. His first move? Stop, assess, decide what actually matters.
 
-I do this with my classroom web app constantly. I want to add features, redesign the interface, make it "better." But the most useful question is: what problem am I actually solving right now?
+I do this with my classroom app constantly. I want to add features, redesign the interface, make it "better." But the most useful question is: what problem am I actually solving right now?
 
 Big companies and solo projects both suffer from the same issue—doing too much without clarity on what matters most.
 
@@ -44,7 +44,7 @@ Now I set a deadline. Two hours to decide. Pick one, build with it. If it's wron
 
 The biggest takeaway: operations thinking isn't just for big companies. It's about systems, processes, identifying bottlenecks, making things run smoother.
 
-I use this in teaching (how do I lesson plan faster without sacrificing feedback?), in building web apps (where do users get stuck?), in learning Korean (what's slowing down my progress?).
+I use this in teaching (how do I grade faster without sacrificing feedback?), in building apps (where do users get stuck?), in learning Korean (what's slowing down my progress?).
 
 Operations isn't glamorous. It's not about vision or innovation. It's about: what's not working, and how do we fix it?
 
@@ -54,7 +54,7 @@ Operations isn't glamorous. It's not about vision or innovation. It's about: wha
 
 I forgot how much I enjoy reading about operations and systems. The pace, the problem-solving, the satisfaction of making things work better.
 
-Reading about Coca-Cola's turnaround reminded me how exciting it still is to building useful things, figuring out how systems work, making stuff better for others.
+Reading about Coca-Cola's turnaround reminded me what kind of work actually excites me: building useful things, figuring out how systems work, making stuff better.
 
 That's the path I'm following now.
 
