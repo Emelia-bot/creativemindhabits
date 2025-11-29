@@ -18,7 +18,7 @@ permalink: "/experience/"
 Classroom instruction and curriculum development, currently testing a classroom management web application in real teaching environments.
 
 **Classroom Management Web App** | 6 months  
-Building and testing a web application designed to solve real problems I encounter in daily teaching practice.
+Building and testing a web application designed to improve my teaching practice.
 
 **Ugly Draft Mode** | 2 months  
 Developed and shipped a web app that removes creative friction from the writing process.
