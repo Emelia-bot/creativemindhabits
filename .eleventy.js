@@ -1,13 +1,12 @@
-
 const { DateTime } = require("luxon");
-const sitemap = require("@quasibit/eleventy-plugin-sitemap");
-
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
   
   // Copy assets folder to output
   eleventyConfig.addPassthroughCopy("src/assets");
-eleventyConfig.addPassthroughCopy("src/assets/js");  
+  eleventyConfig.addPassthroughCopy("src/assets/js");  
+  
   // Date filters
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("LLLL dd, yyyy");
@@ -49,11 +48,8 @@ eleventyConfig.addPassthroughCopy("src/assets/js");
 
   eleventyConfig.setLibrary("md", markdownIt(options).use(markdownItAnchor, opts));
   
-    eleventyConfig.addPlugin(sitemap, {
-    sitemap: {
-      hostname: "https://creativemindhabits.com",
-    },
-  });
+  // RSS Plugin
+  eleventyConfig.addPlugin(pluginRss);
 
   return {
     templateFormats: ["md", "njk", "html"],
