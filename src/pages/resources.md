@@ -6,7 +6,7 @@ permalink: "/resources/"
 
 <div style="margin-bottom: 3rem;">
   <h1 style="margin-bottom: 1rem;">Resources & Templates</h1>
-  <p style="color: #57534e; font-size: 1.15em; line-height: 1.6;">Tools and systems I've built or use regularly. Free to copy and adapt.</p>
+  <p style="color: #57534e; font-size: 1.15em; line-height: 1.6;">Tools and systems I've built or use regularly. Some are free to copy and adapt.</p>
 </div>
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2.5rem 0;">
