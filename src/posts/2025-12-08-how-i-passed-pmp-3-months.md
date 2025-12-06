@@ -62,7 +62,7 @@ Real-world PM work doesn't always match PMI's ideal framework. You have to learn
 
 I built a simple Notion template to track my study sessions, practice test scores, and notes. It kept me consistent and showed progress over the three months.
 
-**[Get the PMP Study Template →]https://living-arrow-802.notion.site/PMP-Study-System-2c1a8562885f8058a92fd2507b47f191?pvs=74**
+**[Get the PMP Study Template →](https://living-arrow-802.notion.site/PMP-Study-System-2c1a8562885f8058a92fd2507b47f191?pvs=74)**
 
 Includes:
 - Daily study tracker
