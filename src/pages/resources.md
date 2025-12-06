@@ -25,17 +25,18 @@ permalink: "/resources/"
   </div>
 </div>
 
-<!-- PMP Study System - NEW -->
+<!-- PMP Study System - UPDATED -->
 <div style="background: white; border: 1px solid #e7e5e4; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);">
   <div style="height: 3px; background: #57534e;"></div>
   <div style="padding: 1.5rem;">
     <p style="font-size: 0.85em; color: #78716c; margin-bottom: 0.5rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">Learning System</p>
     <h3 style="margin-bottom: 0.75rem; font-size: 1.4em;">PMP Study Tools</h3>
-    <p style="color: #57534e; margin-bottom: 1rem;">Study system, notes, and resources I used to pass the PMP certification.</p>
+    <p style="color: #57534e; margin-bottom: 1rem;">Study system, notes, and resources I used to pass the PMP certification in 3 months.</p>
     <p style="font-size: 0.8em;"><span style="background: #f5f5f4; border: 1px solid #e7e5e4; padding: 6px 12px; border-radius: 100px; margin-right: 0.5rem;">Study Guide</span><span style="background: #f5f5f4; border: 1px solid #e7e5e4; padding: 6px 12px; border-radius: 100px; margin-right: 0.5rem;">Certification</span></p>
   </div>
   <div style="padding: 1rem 1.25rem; border-top: 1px solid #e7e5e4; background: #fafaf9;">
-    <a href="#" style="display: inline-block; padding: 10px 16px; background: #1c1917; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9em; opacity: 0.5;">Coming soon</a>
+    <a href="https://living-arrow-802.notion.site/PMP-Study-System-2c1a8562885f8058a92fd2507b47f191" style="display: inline-block; padding: 10px 16px; background: #1c1917; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9em; margin-right: 0.5rem;" target="_blank" rel="noopener">Get the template →</a>
+    <a href="/posts/2025-12-08-how-i-passed-pmp-3-months/" style="display: inline-block; padding: 10px 16px; background: white; color: #292524; text-decoration: none; border: 1px solid #d6d3d1; border-radius: 6px; font-weight: 500; font-size: 0.9em;">Read the guide</a>
   </div>
 </div>
 
