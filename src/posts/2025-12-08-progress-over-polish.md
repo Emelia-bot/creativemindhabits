@@ -8,7 +8,7 @@ layout: layouts/post.njk
 
 Most people wait to share until everything's perfect. But perfect never comes.
 
-I'm learning this with ClassVibey, with this blog, and now with making videos. Ship the rough version. Get feedback. Improve from there.
+I'm learning this with the Classroom Tool, with this blog, and now with making videos. Ship the rough version. Get feedback. Improve from there.
 
 This is my first video - made with VideoScribe's free trial (watermark and all), recorded with my DJI mic, and posted without overthinking it. Progress beats polish every time.
 
