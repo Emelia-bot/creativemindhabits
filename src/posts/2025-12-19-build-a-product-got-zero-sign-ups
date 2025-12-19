@@ -1,0 +1,83 @@
+---
+title: "I Built a Product, Got Zero Signups, and Learned More Than I Expected"
+description: "60 visitors, 0 signups. What my first product launch attempt taught me about positioning, landing pages, and iteration."
+date: 2024-12-19
+tags:
+  - building
+  - classvibey
+  - indie hacking
+  - lessons
+---
+
+Two months ago, I started building a classroom management too. Last week, I did my first real outreach. 60 people visited the site. Zero signed up.
+
+This is what that taught me.
+
+## Why I Built It
+
+I'm a teacher. Like most teachers, I've used ClassDojo—the classroom points and avatars app that somehow became the default. It works. It's also become bloated over the years: parent messaging, school-wide features, behavioral reports, notifications everywhere.
+
+I wanted something simpler. Just avatars and points. A clean screen I could actually use while teaching. Cute characters my students would love. No parent app pinging me at 9pm.
+
+So I built it.
+
+## The Build
+
+I started in October 2025. Working 5-7 hours a week—an hour after work on weekdays, some time on weekends when I had energy. I used it as a way to learn, to make something, to have a project that was mine.
+
+It helped me through a difficult stretch. There's something about building and seeing something take shape, solving small problems, watching it become real—that steadies you when other things feel uncertain.
+
+By December, I had a working product. I was using it in my own classroom. The avatars were cute. The interface was clean. It did exactly what I wanted it to do.
+
+Time to share it with the world.
+
+## The Outreach
+
+I posted on Reddit. Teacher communities. "Here's a simpler classroom tool I built, would love feedback."
+
+The results:
+
+- About 60 people clicked through to the site
+- Zero registered accounts
+- One comment: "It's too similar to ClassDojo"
+- Another: "Please, no"
+
+That one stung.
+
+## What I Actually Learned
+
+Here's the thing: I went in hoping for signups. I got something different—clarity.
+
+**The "too similar" comment was a gift.** It forced me to ask: why is this different? Not in features, but in philosophy. The answer is what it *doesn't* have. No parent accounts. No messaging. No reports. No feature creep. The simplicity isn't a limitation. It's the entire point.
+
+I wasn't communicating that. My landing page said "cute avatars, simple points" but didn't show the product or name the problem it solves. I was selling ingredients instead of the meal.
+
+**So I rebuilt the landing page.** Dashboard screenshot moved above the fold. Added a GIF showing how it works. Created a section called "Features we left out on purpose." Made the positioning sharper.
+
+**The "please, no" comment told me something too.** Some teachers have ClassDojo fatigue.It's not because it's bad, but because they're tired of the whole category of tools and apps in classrooms. That person was never going to be my customer. Good to know.
+
+## Where I Am Now
+
+- Total investment: about $11 in domain and API costs
+- MRR: $0
+- Users: just me, in my own classroom
+
+I'm giving this 4-6 more weeks of real outreach. Facebook teacher groups next, then Discord, then Twitter. Different channels, better landing page, clearer message.
+
+If I can get 10-20 teachers actually using it, I'll know there's something here. If I can't, I'll know that too.
+
+## What This Is Really About
+
+What matters is that I'm building again after a long time. I shipped something. I'm learning what works and what doesn't. The skills compound even when the products don't.
+
+## The Lesson
+
+60 visitors and zero signups felt like failure. It was just iteration.
+
+The Reddit outreach didn't get me any users. However, I reassesed and improved the landing page, created a clearer value proposition, and a realistic view of what the next few weeks need to look like.
+
+Sometimes the win isn't traction. Sometimes it's clarity.
+
+I'll report back after the next round of outreach. If you're a teacher and want to try a simpler classroom tool, My tool is free during beta. And if you're building something of your own—especially if it's not working yet, then I'd encourage you to keep going.
+
+The first attempt rarely works. But it teaches you what the second attempt needs to be.
