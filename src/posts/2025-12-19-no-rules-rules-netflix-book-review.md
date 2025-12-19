@@ -2,11 +2,8 @@
 title: "No Rules Rules: The Book That Reframed My Leadership Past"
 description: "A book review that became a reckoning. How Netflix's culture philosophy helped me understand that my past leadership struggles weren't about competence—they were about culture."
 date: 2024-12-19
-tags:
-  - books
-  - leadership
-  - culture
-  - reflection
+ttags: ["book reviews", "leadership", "lessons"]
+layout: layouts/post.njk
 ---
 
 I finished *No Rules Rules* by Reed Hastings and Erin Meyer expecting a business book about Netflix. What I got was a framework that reframed years of misunderstanding feedback in the workplace.
