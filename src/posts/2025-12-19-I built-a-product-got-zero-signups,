@@ -1,12 +1,9 @@
----
+
 title: "I Built a Product, Got Zero Signups, and Learned More Than I Expected"
+date: 2025-12-19
 description: "60 visitors, 0 signups. What my first product launch attempt taught me about positioning, landing pages, and iteration."
-date: 2024-12-19
-tags:
-  - building
-  - classvibey
-  - indie hacking
-  - lessons
+tags: ["building", "indie hacking", "lessons"]
+layout: layouts/post.njk
 ---
 
 Two months ago, I started building a classroom management too. Last week, I did my first real outreach. 60 people visited the site. Zero signed up.
