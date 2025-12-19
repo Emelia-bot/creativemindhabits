@@ -6,7 +6,7 @@ tags: ["building", "indie hacking", "lessons"]
 layout: layouts/post.njk
 ---
 
-Two months ago, I started building a classroom management too. Last week, I did my first real outreach. 60 people visited the site. Zero signed up.
+Two months ago, I started building a classroom management tool. Last week, I did my first real outreach. 60 people visited the site. Zero signed up.
 
 This is what that taught me.
 
