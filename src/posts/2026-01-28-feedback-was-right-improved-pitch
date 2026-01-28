@@ -1,0 +1,82 @@
+---
+title: "The Feedback Was Right. My Pitch Was Wrong."
+date: 2025-01-28
+description: "A month after my failed Reddit launch, I finally understood what 'too similar to ClassDojo' actually meant—and found UX problems I'd been blind to."
+tags: ["building", "indie hacking", "lessons"]
+layout: layouts/post.njk
+---
+
+Last month I wrote about getting zero signups from my first Reddit outreach. 60 visitors, no conversions, and a comment that stung: "It's too similar to ClassDojo."
+
+I've been sitting with that feedback. And I think I finally understand what went wrong.
+
+## The Problem Wasn't the Product
+
+When someone says "too similar," the instinct is to add features. Differentiate. Make it obviously different.
+
+But that's not what teachers were telling me. They weren't asking for more. They were saying: *I don't understand why this exists.*
+
+My landing page led with features. Unique avatars. Points in one tap. Clean interface. All true. None of it answered the only question that matters: why would I switch from what I'm already using?
+
+## The Real Difference Was Invisible
+
+Here's what my tool actually is: a classroom points system that stays in the classroom.
+
+No parent app. No messaging. No behavior reports going home. No school-wide admin features. No premium tier interrupting you mid-lesson.
+
+That's the difference. Not what it has—what it doesn't have. The simplicity isn't a limitation. It's the entire point.
+
+But I never said that. I was describing ingredients when I should have been solving a problem.
+
+So I rewrote the positioning. The new headline: "A classroom points system that stays in the classroom." The subhead names exactly what's missing on purpose. There's now a section called "Features we left out on purpose" that lists everything I deliberately didn't build.
+
+It's the same product. But now the pitch matches the philosophy.
+
+## Then I Found the Real Problems
+
+After fixing the messaging, I did something I should have done weeks ago. I used the product like a new teacher would.
+
+I added 25 students to a test class. And I couldn't see them all without scrolling.
+
+That's a problem. The whole pitch is "designed for your projector"—but if you can't see your entire class at a glance, the pitch is a lie. I'd been testing with 5-8 students. Real classrooms have 25-35.
+
+I also noticed that awarding points takes three taps: click student, choose category, choose how many points. It works. But if teachers award one point 90% of the time, why am I making them select "1" every time?
+
+Small friction. But when you're doing something 50 times a day, small friction becomes big friction.
+
+## What I'm Fixing Before Round Two
+
+Two things:
+
+1. **Auto-scaling grid.** Student cards shrink as you add more students. Everyone fits on screen. Always. No scrolling.
+
+2. **Default to one point.** Tap student, tap category, done. Award more if you want, but it's not a required step.
+
+Neither is a huge lift. Both directly support the promise I'm making. I should have caught these earlier, but I was too close to see them.
+
+## The Plan
+
+I'm still on break from work, so I have time. The goal for the next few weeks:
+
+- Ship the UX fixes
+- Update the landing page with the new positioning
+- Try Facebook teacher groups instead of Reddit
+- Find 5-10 teachers willing to actually use it
+
+I don't need thousands of users. I just need a handful of teachers who find it genuinely useful. That's the validation that matters.
+
+## What I've Learned So Far
+
+The Reddit feedback felt like rejection. It was actually direction.
+
+"Too similar to ClassDojo" didn't mean "add more features." It meant "tell me why this is different." I just wasn't listening carefully enough.
+
+And the UX issues? I'd been using my own product for months and never noticed them. Sometimes you need to step back and use something like a stranger would.
+
+Building in public is uncomfortable. You put something out, people tell you what's wrong, and you have to sit with it long enough to figure out if they're right. Sometimes they are.
+
+## Next Update
+
+I'll report back after the Facebook outreach. Different channel, better positioning, tighter product.
+
+If you're building something and it's not working yet—keep going. The first attempt is just research for the second one.
